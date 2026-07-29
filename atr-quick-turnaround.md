@@ -116,3 +116,10 @@
 * V1, VR, V2 Werte prüfen *(vom FMS berechnet)*
 * **MFD PERF-Page** (Bildschirm unter dem FMS) ➔ **CONFIRM T/O DATA** drücken
 * *Ergebnis:* V-Speeds werden als Bugs im PFD gesetzt.
+
+---
+
+# Video for Simbrief EFB
+>Programming flights in the MCDU of the ATR using Simbrief, and the EFB in Flight Simulator 2024
+
+https://www.youtube.com/watch?v=xifcTx7GSEc
