@@ -121,5 +121,5 @@
 
 # Video for Simbrief EFB
 >Programming flights in the MCDU of the ATR using Simbrief, and the EFB in Flight Simulator 2024
-
+---
 https://www.youtube.com/watch?v=xifcTx7GSEc
