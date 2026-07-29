@@ -36,13 +36,8 @@
 * **AHRS 1 & 2 / ADC 1 & 2** ........ CHECK NORMAL *(Automatisches Alignment aktiv)*
 * **FGCP (Flight Guidance)** ........ FD 1 & FD 2 OFF *(Alte Flugmodi zurücksetzen)*
 
-### [4] FMS RE-PROGRAMMING (SimBrief Route & Performance)
-* **FMS INIT / ROUTE Page** ......... SELECT
-* **SimBrief Load (AOC/REQ)** ........ EXECUTE *(Origin, Dest & Enroute-Waypoints laden)*
-* **DEP Page** ...................... SET SID *(Startbahn & Abflugroute manuell wählen)*
-* **FPLN Page** ..................... CHECK DISCONTINUITIES *(Discontinuities mit CLR entfernen)*
-* **PERF / WEIGHT Page** ............ UPDATE *(ZFW & Fuel aus EFB bestätigen)*
-* **PERF / TAKEOFF Page** ........... V-SPEEDS COMPUTE & ACCEPT *(V1, VR, V2 im PFD aktivieren)*
+### [4] FMS RE-PROGRAMMING
+* **FMS Quick-Setup Flow** .......... EXECUTE *(Siehe FMS Flow unten: ROUTE ➔ DEP ➔ FPLN ➔ PERF ➔ V-SPEEDS)*
 
 ### [5] BEFORE ENGINE START
 * **Cargo Doors (Right Side)** ...... CLOSED & LOCKED
@@ -85,3 +80,39 @@
 * **Taxi Light** .................... OFF / T.O.
 * **Radar / WX** .................... ON
 * **Transponder** .................... ALT / ON
+
+---
+
+# 💻 ATR FMS Quick-Setup Flow (EFB Import)
+
+> [1. EFB IMPORT] ──► [2. DEP / SID] ──► [3. FPLN CHECK] ──► [4. WEIGHTS] ──► [5. T/O PERF & CONFIRM]
+
+---
+
+### 1. ROUTE (EFB Import)
+* **EFB** ➔ *SimBrief OFP Fetch* ➔ **SET FLIGHT PLAN** drücken
+* *Ergebnis:* Flugplan wird direkt ins FMS geschoben.
+
+### 2. DEP (Departure Setup)
+* **FPLN**-Taste drücken ➔ LSK neben **Origin Airport** (oben links)
+* **RUNWAY** & **SID** / **TRANSITION** auswählen
+* **EXEC** drücken
+
+### 3. FPLN (Discontinuity Check)
+* **FPLN**-Taste drücken
+* Durch die Wegpunkte scrollen
+* 🔍 **Discontinuity Check:** Unterbrechungen mit der **CLR**-Taste und Softkey löschen, danach mit **EXEC** bestätigen.
+* ⚠️ *Arrival/Approach explizit leer lassen.*
+
+### 4. PERF INIT / WEIGHT (Payload & Fuel)
+* **PERF**-Taste drücken ➔ **PERF INIT** ➔ **WEIGHT**
+* **ZFW** *(Zero Fuel Weight)*: LSK anklicken *(übernimmt ZFW automatisch)*
+* **FUEL ON BOARD**: LSK anklicken *(übernimmt echten Tankinhalt)*
+* **PERF INIT** ➔ **CRZ ALT** *(Reiseflughöhe aus SimBrief)* prüfen/eintragen
+
+### 5. TAKEOFF PERFORMANCE (V-Speeds & Confirmation)
+* **PERF**-Taste ➔ **TAKEOFF** wählen
+* **FLAPS** prüfen *(15°)*
+* V1, VR, V2 Werte prüfen *(vom FMS berechnet)*
+* **MFD PERF-Page** (Bildschirm unter dem FMS) ➔ **CONFIRM T/O DATA** drücken
+* *Ergebnis:* V-Speeds werden als Bugs im PFD gesetzt.
