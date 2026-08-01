@@ -1,6 +1,6 @@
 # FlyByWire A320NX – Standard Operating Procedures (SOP)
 
-Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **FlyByWire A320NX** im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit **BeyondATC**, **SimBrief**, dem **FlyPad (EFB)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
+Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **FlyByWire A320NX** im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **FlyPad (EFB)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
 
 > **Transit- / Turnaround-Hinweis:**
 > Bei kurzen Zwischenstopps ohne vollständiges Herunterfahren des Flugzeugs kann direkt die zeitoptimierte [Transit SOP](transit-sop.md) genutzt werden.
@@ -28,7 +28,7 @@ Der Flug beginnt am Gate im komplett stromlosen Zustand. Ziel dieser Phase ist d
     *   **CREW SUPPLY** (Sauerstoff) auf **ON** schalten.
     *   Alle sechs **FUEL PUMPS** (L TK, C TK, R TK) auf **ON** schalten.
     *   Passagier- und Notfallsignale: **EMER EXIT LT** auf **ARM** setzen. **NO SMOKING** (bzw. **NO PORTABLE ELEC DEVICE**) auf **ON** oder **AUTO** setzen. **SEAT BELTS** auf **ON** setzen.
-*   **ATC IFR Clearance:** Einholen der Streckenfreigabe via BeyondATC (Delivery): *"Request IFR Clearance"*. Nach Erhalt von Route, initialer Steigflughöhe und Squawk-Code die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen.
+*   **ATC IFR Clearance:** Einholen der Streckenfreigabe bei ATC (Delivery): *"Request IFR Clearance"*. Nach Erhalt von Route, initialer Steigflughöhe und Squawk-Code die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen.
 *   **Initialisierung ADIRUs:** Auf dem Overhead Panel die drei ADIRS-Schalter nacheinander (1, 2, 3) von OFF auf **NAV** drehen.
 *   **Detailliertes MCDU / FMGS Setup:** 
     *   **SimBrief Uplink (AOC):** Taste **MCDU MENU** drücken $\rightarrow$ Line Select Key (LSK) **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ LSK **INIT DATA REQ**.
@@ -45,7 +45,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
 
 *   **APU Start:** Ca. 10 Minuten vor dem Pushback **APU MASTER SW** auf **ON** und anschließend **APU START** auf **ON** schalten. Sobald auf dem ECAM *APU AVAIL* erscheint: **APU BLEED** auf **ON** schalten.
 *   **Bodenstrom abkoppeln:** **EXT PWR** am Overhead Panel ausschalten und über das EFB trennen lassen.
-*   **ATC Freigabe & Beacon Light:** Bei BeyondATC (GND): *"Request Pushback and Engine Start"*. Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Bodenpersonal den bevorstehenden Pushback und Triebwerksstart.
+*   **ATC Freigabe & Beacon Light:** Bei ATC (GND): *"Request Pushback and Engine Start"*. Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Bodenpersonal den bevorstehenden Pushback und Triebwerksstart.
 *   **Before Start Flow & Checklist:** Parkbremse lösen und Before Start Checklist abarbeiten.
 *   **Triebwerksanlass-Prozedur:**
     *   Den **ENG MODE SELECTOR** (Mittelkonsole) auf **IGN/START** drehen.
@@ -59,7 +59,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
 
 ### 3. Taxi & Vorbereitung zum Start
 
-*   **ATC Freigabe & Rollbeleuchtung:** Bei BeyondATC: *"Request Taxi"*. Nach Erhalt der Rollfreigabe im *After Start / Taxi Flow* das **NOSE** Light auf **TAXI** schalten. Beim Rollen auf oder über Landebahnen und Taxiways zusätzlich die **RWY TURN OFF** Lights auf **ON** schalten.
+*   **ATC Freigabe & Rollbeleuchtung:** Bei ATC: *"Request Taxi"*. Nach Erhalt der Rollfreigabe im *After Start / Taxi Flow* das **NOSE** Light auf **TAXI** schalten. Beim Rollen auf oder über Landebahnen und Taxiways zusätzlich die **RWY TURN OFF** Lights auf **ON** schalten.
 *   **After Start Flow / T/O Config:**
     *   **FLAPS** auf die berechnete Start-Einstellung setzen (z. B. **FLAPS 1**).
     *   **GND SPOILERS** armieren (Speed Brake Hebel nach oben ziehen).
@@ -73,7 +73,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
 ### 4. Takeoff & Departure
 Ankunft am Holding Point der aktiven Startbahn.
 
-*   **ATC Freigabe:** Bei BeyondATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
+*   **ATC Freigabe:** Bei ATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
 *   **Lichter für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
     *   **STROBE** von AUTO auf **ON** schalten.
     *   **LANDING** Lights (beide) auf **ON** schalten.
@@ -85,7 +85,7 @@ Ankunft am Holding Point der aktiven Startbahn.
     *   Bei VR: Rotieren.
 *   **Nach dem Abheben & Departure Handoff:**
     *   Bei positiver Steigrate: **GEAR UP**.
-    *   **BeyondATC Handoff:** Bei Anweisung durch den Tower den Frequenzwechsel zu Departure/Radar bestätigen und durchführen.
+    *   **ATC Handoff:** Bei Anweisung durch den Tower den Frequenzwechsel zu Departure/Radar bestätigen und durchführen.
     *   **Aktivierung des Autopiloten & FCU Logik im Steigflug:** Ab 100 ft AGL kann **AP1** durch Drücken des **AP1**-Buttons an der FCU aktiviert werden.
         *   **Managed Climb (Push / CLB):** Für den Standard-Steigflug gemäß Flugplan den Höhen-Drehknopf (**ALT**-Knopf) an der FCU drücken ("Push"). Im FCU-Display erscheint ein Punkt (Dot) neben der Höhe, das FMA zeigt **CLB**. Das System folgt dem MCDU-Profil unter Beachtung aller Höhen- und Geschwindigkeitsrestriktionen der SID.
         *   **Open Climb (Pull / OP CLB):** Bei Aufhebung von Restriktionen durch ATC (*"cancel level restrictions"*) oder Radar-Vektoren den **ALT**-Knopf ziehen ("Pull"). Der Punkt erlischt, das FMA zeigt **OP CLB**. Das Flugzeug steigt direkt auf die eingedrehte Zielhöhe.
@@ -105,7 +105,7 @@ Ankunft am Holding Point der aktiven Startbahn.
 > Die Reiseflugphase dient der frühzeitigen Anflugvorbereitung und dem Briefing (*Aviate, Navigate, Communicate*). Das Energiemanagement hat stets Priorität. Eine Plausibilitätsprüfung des Sinkflugs (3 NM Distanz pro 1.000 ft Höhenverlust) ist durchzuführen.
 
 *   **Reiseflug-Überwachung:** Regelmäßige Überprüfung des Treibstoffs (MCDU PROG Page).
-*   **Wetter & Arrival Clearance (BeyondATC Handoff):** Ca. 100 NM vor dem Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via BeyondATC durchführen und Arrival/Approach Clearance bestätigen lassen.
+*   **Wetter & Arrival Clearance (ATC Handoff):** Ca. 100 NM vor dem Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via ATC durchführen und Arrival/Approach Clearance bestätigen lassen.
 *   **Detailliertes MCDU Arrival Setup:**
     *   Taste **F-PLN** drücken, zum Zielflughafen scrollen und **ARRIVAL** wählen.
     *   Anflugverfahren (z. B. ILS 08R), STAR und VIA auswählen und mit **INSERT** bestätigen.
@@ -150,7 +150,7 @@ Sicheres Einrollen und Abstellen des Flugzeugs am Gate.
 *   **Runway Vacated (Nach Verlassen der Startbahn):**
     *   **STROBE** zurück auf **AUTO**, **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**.
     *   **FLAPS** auf **0** einfahren, **GND SPOILERS** disarmieren.
-*   **ATC Freigabe:** Rollfreigabe zum Gate via BeyondATC anfordern.
+*   **ATC Freigabe:** Rollfreigabe zum Gate via ATC anfordern.
 *   **Triebwerkskühlung & APU Start:** Nach Verlassen der Piste **APU MASTER SW** auf **ON** und **APU START** auf **ON** schalten (Triebwerks-Abkühlzeit von ca. 3 Minuten beachten).
 *   **Parking / Gate Arrival:**
     *   Am Gate stoppen, **PARKING BRAKE** auf **ON** setzen.

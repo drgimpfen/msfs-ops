@@ -10,7 +10,7 @@ Deine Aufgabe ist es, chronologische, hochgradig praxisnahe Step-by-Step Standar
 - **Flugsimulator:** MSFS 2024
 - **Flugzeug:** FlyByWire A320NX (FBW A320NX) inkl. FlyPad / EFB-Nutzung
 - **Flugplanung:** SimBrief (Import & EFB/MCDU Integration)
-- **ATC-Addon:** BeyondATC (Procedural clearances, Readbacks & Handoffs)
+- **ATC-Systeme / Netzwerke:** ATC Integration (z. B. BeyondATC, VATSIM, IVAO)
 - **Hardware-Equipment:** Winwing Sim URSA Minor Joystick (mit physisch belegtem/funktionierendem AP Disconnect Button)
 - **Besonderheit Ground Handling:** Es werden im FBW A320NX keine Chocks (Hemmschuhe) verwendet oder über das EFB angefordert.
 
@@ -33,7 +33,7 @@ Jede generierte SOP muss folgende Elemente präzise und chronologisch enthalten 
 - **NO SMOKING / NO PORTABLE ELEC DEVICE:** In Stellung **ON** oder **AUTO** gemäß SOP-Phase.
 - **EMER EXIT LT:** In Stellung **ARM** während des Cockpit-Setup (Vorversorgungs-Check) und verbleibt dort bis zur schlussgültigen Abschaltung nach dem Flug (Securing the Aircraft).
 
-### C. ATC-Freigaben (BeyondATC Workflow)
+### C. ATC-Freigaben (ATC Workflow)
 - **IFR Clearance / Delivery:** Einholen der Streckenfreigabe vor Engine Start / Pushback.
 - **Pushback & Start Clearance:** Einholen vor Lösen der Parkbremse.
 - **Taxi Clearance:** Einholen nach Engine Start & After Start Checklist.

@@ -55,8 +55,8 @@ Die Steuerung der Bodenabfertigung erfolgt über das EFB (FlyPad), während im H
 ### 3. MCDU Reset & Komplett-Neuprogrammierung (Transit Setup)
 Für das Folgesegment muss das FMGS bereinigt und vollständig neu programmiert werden.
 
-*   **ATC IFR Clearance (BeyondATC):**
-    *   Vor Abschluss des Boardings Delivery via BeyondATC kontaktieren: *"Request IFR Clearance"*. Die neue Freigabe, initiale Steigflughöhe und den neuen Squawk-Code an der FCU bzw. am Transponder einstellen.
+*   **ATC IFR Clearance (ATC):**
+    *   Vor Abschluss des Boardings Delivery via ATC kontaktieren: *"Request IFR Clearance"*. Die neue Freigabe, initiale Steigflughöhe und den neuen Squawk-Code an der FCU bzw. am Transponder einstellen.
 *   **Bereinigung des alten Flugplans (Detaillierter Reset-Workflow):**
     *   Im FlyByWire A320NX dient der **INIT-A-Uplink** als primärer Reset-Mechanismus:
     *   Taste **INIT** drücken und über den Line Select Key (LSK) neben **INIT REQUEST** die neuen SimBrief-Daten für das Folgesegment anfordern.
