@@ -57,11 +57,11 @@ Da ein neuer Flug ansteht, muss das FMGS für das neue Leg bereinigt und vollst�
         *   Wähle den Zielflughafen $\rightarrow$ wähle LSK **ARRIVAL** $\rightarrow$ wähle den neuen Approach, die STAR und ggf. das VIA $\rightarrow$ drücke LSK **INSERT**.
         *   Überprüfe den Flugplan auf verbleibende **F-PLN DISCONTINUITY** und entferne diese mit **CLR** und dem jeweiligen LSK.
     *   **INIT B Seite:** Drücke erneut **INIT** und wechsle zur Seite 2 (bzw. **NEXT PAGE**). Überprüfe das neue **ZFW / ZFWCG** und drücke zweimal den rechten LSK neben **BLOCK**, um das neue SimBrief-Block-Fuel zu übernehmen.
-    *   **PERF Seite & APPR Phase:** Drücke die Taste **PERF**. 
+    *   **PERF Seite:** Drücke die Taste **PERF**. 
         *   Trage die neuen V-Speeds (**V1**, **VR**, **V2**) für den neuen Start ein (berechnet über das EFB).
         *   Trage die neue **FLEX TEMP** ein.
         *   Trage die neue Start-Trimmung bei **THS/FLAPS** ein (z.B. `1/UP0.5`).
-        *   Wechsle in die **APPR** Phase (via *NEXT PAGE* in PERF) und trage das aktuelle **QNH**, die **TEMP**, den **MAG WIND** sowie die **BARO / RADIO** Minimums für den neuen Zielflughafen ein.
+        *   *Hinweis zur APPR Phase:* Die **APPR** Phase (erreichbar über *NEXT PAGE* in PERF) bleibt am Boden vorerst unberührt; sie wird laut Standard-SOP erst im Sinkflug ausgefüllt, sobald die aktuellen Wetter- und Freigabedaten vom ATC vorliegen.
 
 ---
 
