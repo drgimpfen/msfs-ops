@@ -6,11 +6,11 @@ Diese SOP beschreibt die zeitoptimierte **Transit Procedure** (Turnaround) für 
 Bei kurzen Zwischenstopps am Gate (Transit) wird das Flugzeug nicht vollständig heruntergefahren. Der Ablauf ist darauf ausgelegt, die Bodenzeit zu minimieren und das Flugzeug ohne Kaltstart sicher und effizient für das nächste Flugsegment vorzubereiten:
 * **Strom- & Zapfluftversorgung:** Die APU läuft durchgehend weiter und übernimmt via **APU BLEED ON** die Klimatisierung sowie die elektrische Versorgung des Flugzeugs. Es ist keine externe Ground Power Unit (GPU) erforderlich.
 * **Avionik & Systeme:** Die Trägheitsnavigationssysteme (ADIRS 1, 2, 3) verbleiben im **NAV**-Modus (kein zeitintensives Re-Alignment erforderlich). Sauerstoff (**CREW SUPPLY**) und Notbeleuchtung (**EMER EXIT LT**) verbleiben in ihrer aktiven Betriebsstellung.
-* **Ablaufkette:**
-  1. **Arrival & Secure:** Ankunft am Gate, Feststellbremse setzen, Übernahme auf APU BLEED und Abstellen der Triebwerke (siehe [Standard SOP – Abschnitt 7: After Landing, Taxi & Shutdown](sop.md#7-after-landing-taxi--shutdown)).
-  2. **Ground Handling via EFB:** Deboarding der aussteigenden Passagiere, Refueling (Betankung bei laufender APU) und anschließendes Boarding des Folgesegments.
-  3. **FMGS / MCDU Transit Setup:** Bereinigung des alten Flugplans durch Initialisierung des neuen SimBrief-Uplinks und Neuprogrammierung von Flugplan, Performance- und Gewichtsdaten.
-  4. **Departure Transition:** Nahtloser Übergang in den Triebwerksstart und Pushback der [Standard SOP – Abschnitt 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).
+* **Ablaufkette des Transits:**
+  * **[1. Arrival, Parking & Transit Setup](#1-arrival-parking--transit-setup):** Ankunft am Gate, Feststellbremse setzen, Übernahme auf APU BLEED und Abstellen der Triebwerke.
+  * **[2. Deboarding, Refueling & Boarding via EFB (FlyPad)](#2-deboarding-refueling--boarding-via-efb-flypad):** Deboarding der aussteigenden Passagiere, Refueling (Betankung bei laufender APU) und anschließendes Boarding des Folgesegments.
+  * **[3. MCDU Reset & Komplett-Neuprogrammierung (Transit Setup)](#3-mcdu-reset--komplett-neuprogrammierung-transit-setup):** Bereinigung des alten Flugplans durch Initialisierung des neuen SimBrief-Uplinks und Neuprogrammierung von Flugplan, Performance- und Gewichtsdaten.
+  * **[4. Übergang zurück in die Standard-SOP](#4-übergang-zurück-in-die-standard-sop):** Vorbereitung zum Pushback und nahtloser Übergang in den Triebwerksstart der [Standard SOP – Abschnitt 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).
 
 ---
 
