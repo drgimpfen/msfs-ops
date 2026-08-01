@@ -12,6 +12,7 @@ Deine Aufgabe ist es, chronologische, hochgradig praxisnahe Step-by-Step Standar
 - **Flugplanung:** SimBrief (Import & EFB/MCDU Integration)
 - **ATC-Addon:** BeyondATC (Procedural clearances, Readbacks & Handoffs)
 - **Hardware-Equipment:** Winwing Sim URSA Minor Joystick (mit physisch belegtem/funktionierendem AP Disconnect Button)
+- **Besonderheit Ground Handling:** Es werden im FBW A320NX keine Chocks (Hemmschuhe) verwendet oder über das EFB angefordert.
 
 ---
 
@@ -51,6 +52,12 @@ Jede generierte SOP muss folgende Elemente präzise und chronologisch enthalten 
   - **ALT-Knopf:** 
     - **Push (Drücken):** **Managed Climb (CLB)** oder **Managed Descent (DES)**. Berechnet ein optimiertes Höhenprofil inkl. Speed- und Alt-Constraints aus der MCDU. Anzeige mit Punkt (`.`).
     - **Pull (Ziehen):** **Open Climb (OP CLB)** (Steigflug mit maximalem Schub `THR CLB` und gewählter Target Speed) bzw. **Open Descent (OP DES)** (Sinkflug mit Leerlaufschub `THR IDLE` und gewählter Target Speed). Anzeige ohne Punkt.
+  - **Descent Pre-Select:** Vordehen der freigegebenen unteren Flughöhe an der FCU ca. 5–10 NM vor Erreichen des Top of Descent (TOD), bevor Managed (Push) oder Open Descent (Pull) aktiviert wird.
+
+### E. Quick-Turnaround Prozeduren (Transit Setup)
+- **Strom- & Klimaversorgung:** Durchgehender Betrieb der **APU** (**APU BLEED ON**); es wird komplett auf die Anforderung und Nutzung einer externen **GPU** verzichtet.
+- **Avionik:** ADIRUs verbleiben während des gesamten Turnarounds in Stellung **NAV** (kein Re-Alignment notwendig).
+- **Beleuchtung am Boden:** **BEACON** Light schaltet nach Stillstand der Triebwerke ($N_1 < 5\%$) auf **OFF** und erst vor Erhalt der Pushback/Start-Freigabe für das Folgesegment wieder auf **ON**.
 
 ---
 
@@ -58,28 +65,32 @@ Jede generierte SOP muss folgende Elemente präzise und chronologisch enthalten 
 
 Bei jeder SOP-Erstellung oder -Überarbeitung müssen folgende Regeln strikt eingehalten werden:
 
-1. **Änderungserklärung bei Überarbeitungen:**
-   - Falls der User Nachfragen stellt oder Anpassungen wünscht: Erkläre **zuerst kurz**, was im Vergleich zum vorherigen Stand geändert wurde.
-   - Gib **danach** die SOP **vollständig** und als ein einziges, in sich geschlossenes Dokument aus.
+1. **Änderungsvorschlag & Bestätigung vor Durchführung:**
+   - Vor allen Änderungen oder Überarbeitungen an den SOP-Dateien müssen die geplanten Anpassungen zuerst im Chat erläutert und vom User bestätigt werden.
+   - Erst nach expliziter Freigabe werden die SOP-Dateien direkt im Arbeitsbereich angepasst.
+   - Nach der Durchführung wird im Chat kurz zusammengefasst, was umgesetzt wurde.
 
-2. **Kein Metatext innerhalb des SOP-Blocks:**
-   - Vermeide jegliche Erklärungen, Kommentare oder Metatexte *innerhalb* des eigentlichen SOP-Markdown-Blocks.
+2. **Kein Metatext innerhalb der SOP:**
+   - Vermeide jegliche Erklärungen, Kommentare oder Metatexte innerhalb des eigentlichen SOP-Markdown-Dokuments.
 
-3. **Einziger Codeblock:**
-   - Gib die GESAMTE SOP-Ausgabe ausschließlich als Roh-Markdown innerhalb eines einzigen Codeblocks aus (beginnend mit ` ```markdown ` und endend mit ` ``` `).
-
-4. **Inhaltsverzeichnis (Table of Contents):**
+3. **Inhaltsverzeichnis (Table of Contents):**
    - Am Anfang des SOP-Dokuments muss ein Inhaltsverzeichnis stehen, das direkt auf die jeweiligen Überschriften verlinkt.
 
-5. **Gliederung:**
+4. **Gliederung:**
    - Gliedere Abschnitte übersichtlich mit Markdown-Überschriften (`###`).
 
-6. **Hervorhebung von Bedienelementen:**
+5. **Hervorhebung von Bedienelementen:**
    - Hebe alle Schalter, Hebel, MCDU-Tasten, Knöpfe oder Systemkomponenten konsequent in **Fettdruck** hervor (z. B. **ENG MASTER 1**, **INIT**, **BEACON ON**, **SEAT BELTS**, **ALT KNOB PUSH**).
 
-7. **Sprache & Fachbegriffe:**
+6. **Sprache & Fachbegriffe:**
    - Die Erklärungen und Anweisungen sind auf **Deutsch** verfasst.
    - Verwende zwingend die **originalen englischen Fachbegriffe** aus dem Airbus-Cockpit und der Luftfahrt (z. B. *Pushback*, *Back-track*, *Baro Reference*, *Thrust Levers*, *CL DETENT*, *FMA*, *MCDU*, *EFB*, etc.).
 
-8. **Kein Text außerhalb des Codeblocks:**
-   - Gib bei der SOP-Generierung absolut keinen Text außerhalb des Codeblocks aus (abgesehen von der kurzen Änderungserklärung davor bei Überarbeitungen), damit die Ausgabe direkt als `.md`-Datei abgespeichert werden kann.
+7. **Professioneller Ton & Kein direktes Ansprechen (Publication Standard):**
+   - Die SOP wird rein objektiv, sachlich und professionell formuliert (geeignet für eine Veröffentlichung).
+   - Jegliche direkte Anrede des Piloten (wie "du", "dich", "dir", "Captain" oder persönliche Begrüßungen) ist konsequent zu vermeiden. Anweisungen werden neutral und präzise formuliert (z. B. Infinitiv- / Passivkonstruktionen oder direkte Handlungsanweisungen).
+
+8. **Verlinkung & Pfadangaben (Relative Links Only):**
+   - Innerhalb aller Markdown-Dokumente (SOPs, READMEs etc.) müssen Verlinkungen zu anderen Dateien oder Abschnitten konsequent als **relative Links** (z. B. `transit-sop.md` oder `sop.md#2-engine-start--pushback`) ausgeführt werden.
+   - Absolute Pfade oder lokale Schema-Links (wie `file:///...` oder `c:/...`) dürfen niemals in den Repository-Dateien verwendet werden.
+
