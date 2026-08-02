@@ -181,20 +181,18 @@ Ankunft am Holding Point der aktiven Startbahn.
 *   **Deaktivierung des Autopiloten (Manual Landing):**
     *   Sobald die Startbahn in Sicht ist und das Flugzeug stabilisiert im Anflug liegt (typischerweise zwischen 1.000 ft und 500 ft AGL), wird die Steuerung manuell übernommen.
     *   **Autopilot Disconnect:** Das Abschalten erfolgt über den **AUTOPILOT OFF** Button am Joystick mittels Doppelklick: Der erste Klick trennt den Autopiloten, der zweite Klick quittiert und stoppt die akustische Warnung.
-*   **Touchdown:** 
-    *   Bei der Ansage *"Retard"* die **THRUST LEVERS** auf **IDLE** ziehen und das Flugzeug abfangen.
-    *   Nach dem Aufsetzen: **REVERSERS** (Schubumkehr) auf MAX oder IDLE setzen. Bei 70 Knoten Reverser einfahren, bei 40 Knoten manuell ausrollen.
+*   **Touchdown & Reverser:** Bei der Ansage *"Retard"* die **THRUST LEVERS** auf **IDLE** ziehen. Nach dem Aufsetzen des Hauptfahrwerks **REVERSERS** auf **REV MAX** oder **REV IDLE** setzen. Bei 70 Knoten auf **REV IDLE** zurücknehmen und vor dem Abrollen vollständig auf **IDLE** einfahren.
 
 ---
 
 ### 7. After Landing, Taxi & Shutdown
 Sicheres Einrollen, Abstellen und vollständiges Herunterfahren des Flugzeugs am Gate.
 
-> **Triebwerks-Abkühlzeit (Thermal Engine Protection):**
-> Die 3-minütige Abkühlphase bei Idle-Schub schützt die Turbinenwellen vor thermischem Schock. Die Rollzeit vom Verlassen der Piste bis zum Gate wird dabei vollständig als Abkühlzeit angerechnet.
+> **Airmanship & Taxi-In Management:**
+> * **Runway Vacated:** Nach dem Überrollen der gelben Holding-Linie nicht anhalten. Das Flugzeug rollt flüssig weiter, während die Systeme umgestellt werden und der Funkspruch an Ground erfolgt.
+> * **Triebwerks-Abkühlzeit:** Die 3-minütige Abkühlphase bei Idle-Schub schützt die Turbinenwellen vor thermischem Schock. Die Rollzeit vom Verlassen der Piste bis zum Gate wird dabei vollständig als Abkühlzeit angerechnet.
 
-*   **Runway Vacated (Nach Verlassen der Startbahn):**
-    *   Nach der Landung bei ca. 70 Knoten **REVERSERS** einfahren. Bei 40 Knoten manuell ausrollen und die Piste an einer geeigneten Abrollbahn verlassen.
+*   **Runway Vacated:**
     *   Sobald die gelbe Holding-Linie vollständig überrollt ist: **STROBE** von ON auf **AUTO** (oder **OFF**), **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**.
     *   **RWY TURN OFF** Lights beim Verlassen des aktiven Rollbahnbereichs auf **OFF** schalten.
     *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten.
