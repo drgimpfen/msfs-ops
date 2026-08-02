@@ -97,6 +97,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Anlassens beider T
     *   **TCAS MODE:** Auf **TA/RA** stellen.
 *   **Flight Controls Check:** ECAM F/CTL Page überwachen: Stick Full Up, Down, Neutral; Stick Full Left, Right, Neutral; Rudder Pedals Full Left, Right, Neutral.
 *   **Flight Instruments & T/O CONFIG Test:** Den blauen **T/O CONFIG** Button auf der Mittelkonsole **einmalig** drücken. Dies testet die technische Startkonfiguration (Klappen, Trimmung, Spoiler). Die ECAM-Zeile **CABIN READY** verbleibt vorerst auf blau **CHECK**, bis das Kabinensignal eintrifft.
+*   **Brake Fan Check:** ECAM WHEEL-Seite prüfen. Verifizieren, dass die Bremstemperaturen unter 150°C liegen und **BRK FAN** auf **OFF** steht.
 
 ---
 
@@ -163,16 +164,23 @@ Ankunft am Holding Point der aktiven Startbahn.
 > **Airmanship & Deceleration Tips:**
 > Zur Vermeidung von "High and Fast"-Szenarien können bei ATC-Abkürzungen frühzeitig die **SPEED BRAKES** (bis zur Hälfte) in Kombination mit **OP DES** oder das Ausfahren des Fahrwerks (**GEAR DOWN**) als Luftwiderstand genutzt werden.
 
-*   **ATC Freigabe:** Empfang von *"Cleared ILS Approach"* und im Endanflug *"Cleared to land"*.
-*   **Verlangsamung & Flaps Timeline:**
-    *   Bei Green Dot Speed: **FLAPS 1** setzen. Tasten **LS** und **APPR** an der FCU drücken, um Localizer und Glideslope zu aktivieren.
+*   **Initial Approach & LS-Aktivierung:**
+    *   **LS Button (EFIS Panel):** Beim Einrollen in den Anflugsektor (vor dem Abfangen des Localizers) die **LS**-Taste am EFIS Control Panel drücken, um die ILS-Skalen (Localizer & Glideslope Rauten) im PFD einzublenden.
+    *   Bei Green Dot Speed: **FLAPS 1** setzen.
+*   **Approach Clearance & APPR-Aktivierung (FCU):**
+    *   Nach Erhalt der Freigabe von ATC (*"Cleared ILS Approach Runway..."*) und auf Intercept-Kurs:
+        *   **APPR Button:** Die **APPR**-Taste an der FCU drücken (FMA zeigt `LOC` blau und `G/S` blau).
+        *   **AP2 Button:** Zusätzlich die **AP2**-Taste an der FCU drücken, um Dual-Channel Autoland / CAT III vorzubereiten (FMA zeigt `AP 1+2`).
+*   **Established-Meldung (ATC Communication):**
+    *   Sobald der Localizer abgefangen und zentriert ist (FMA zeigt `LOC` grün): Bei ATC (Approach / Tower) melden: *"Established ILS Runway [Pistenbezeichnung]"*.
+*   **Final Approach Sequence & Flaps Timeline:**
     *   Bei S-Speed: **FLAPS 2** setzen.
     *   Ca. 2.000 ft AAL (oder 1/2 Dot unter Glideslope): **GEAR DOWN** ausfahren, **GND SPOILERS** armieren, **NOSE** Light auf T.O. und **RWY TURN OFF** Lights auf ON schalten.
     *   Unterhalb VFE für Flaps 3: **FLAPS 3** setzen, gefolgt von **FLAPS FULL** bei F-Speed.
-*   **Autobrake & Checklist:** **AUTOBRAKE** auf **MED** oder **LOW** setzen. Landing Checklist abarbeiten.
+    *   **AUTOBRAKE:** Auf **MED** oder **LOW** setzen. Landing Checklist abarbeiten.
 *   **Deaktivierung des Autopiloten (Manual Landing):**
     *   Sobald die Startbahn in Sicht ist und das Flugzeug stabilisiert im Anflug liegt (typischerweise zwischen 1.000 ft und 500 ft AGL), wird die Steuerung manuell übernommen.
-    *   **Hardware-Bedienung:** Das Abschalten erfolgt über den **AP Disconnect Button** am **Winwing Sim URSA Minor** Joystick mittels **Doppelklick**: Der erste Klick trennt den Autopiloten, der zweite Klick quittiert und stoppt die akustische Warnung sofort.
+    *   **Autopilot Disconnect:** Das Abschalten erfolgt über den **AUTOPILOT OFF** Button am Joystick mittels Doppelklick: Der erste Klick trennt den Autopiloten, der zweite Klick quittiert und stoppt die akustische Warnung.
 *   **Touchdown:** 
     *   Bei der Ansage *"Retard"* die **THRUST LEVERS** auf **IDLE** ziehen und das Flugzeug abfangen.
     *   Nach dem Aufsetzen: **REVERSERS** (Schubumkehr) auf MAX oder IDLE setzen. Bei 70 Knoten Reverser einfahren, bei 40 Knoten manuell ausrollen.
@@ -182,36 +190,40 @@ Ankunft am Holding Point der aktiven Startbahn.
 ### 7. After Landing, Taxi & Shutdown
 Sicheres Einrollen, Abstellen und vollständiges Herunterfahren des Flugzeugs am Gate.
 
+> **Triebwerks-Abkühlzeit (Thermal Engine Protection):**
+> Die 3-minütige Abkühlphase bei Idle-Schub schützt die Turbinenwellen vor thermischem Schock. Die Rollzeit vom Verlassen der Piste bis zum Gate wird dabei vollständig als Abkühlzeit angerechnet.
+
 *   **Runway Vacated (Nach Verlassen der Startbahn):**
     *   Nach der Landung bei ca. 70 Knoten **REVERSERS** einfahren. Bei 40 Knoten manuell ausrollen und die Piste an einer geeigneten Abrollbahn verlassen.
     *   Sobald die gelbe Holding-Linie vollständig überrollt ist: **STROBE** von ON auf **AUTO** (oder **OFF**), **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**.
     *   **RWY TURN OFF** Lights beim Verlassen des aktiven Rollbahnbereichs auf **OFF** schalten.
-    *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten (Bodenpersonal- & Strahlungsschutz).
+    *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten.
     *   **TCAS & XPDR:** **TCAS MODE** auf **STBY** (oder `TA ONLY`), **ATC/XPDR MODE** auf **AUTO** / **STBY**.
     *   **FLAPS:** Klappen auf **0** einfahren (bei Matsch, Schnee oder Vereisungsgefahr auf den Rollwegen Klappen ausgefahren lassen).
     *   **GND SPOILERS:** Spoilers disarmieren (Hebel manuell nach unten drücken).
     *   **ENG ANTI ICE:** Falls zuvor aktiviert, ausschalten (sofern keine Vereisungsbedingungen auf den Taxiways vorliegen).
 *   **Taxi to Gate & APU Management:**
     *   Rollfreigabe zum Gate bei ATC anfordern (*"Request taxi to gate"*).
-    *   Triebwerks-Abkühlzeit beachten: Die Triebwerke benötigen vor dem Abschalten mindestens **3 Minuten** Stabilisierung bei Idle-Schub.
     *   Ca. 3 Minuten vor Erreichen der Parkposition **APU MASTER SW** auf **ON** und **APU START** auf **ON** schalten.
 *   **Parking / Gate Arrival:**
     *   **Ground Crew Safety:** Beim Eindrehen in den Standplatz (Sichtkontakt mit Marshaller / VDGS) das **NOSE** Light (Taxi) auf **OFF** schalten, um den Einweiser nicht zu blenden.
     *   Flugzeug exakt auf der Stop-Markierung anhalten, **PARKING BRAKE** auf **ON** setzen.
     *   Sobald im ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten.
     *   Über das FlyPad (EFB) den Jetway/Fluggastbrücke bzw. die Passagiertreppe anfordern (falls GPU genutzt wird: **EXT PWR** auf **ON** schalten).
+    *   **BRK FAN:** ECAM WHEEL-Seite prüfen. Bei Bremstemperaturen über 150°C am Standplatz auf **ON** schalten.
 *   **Engine Shutdown Flow:**
-    *   Nach Verifizierung der 3-minütigen Abkühlzeit **ENG MASTER 1** und **ENG MASTER 2** auf **OFF** schalten.
-    *   Sobald die Triebwerke vollständig zum Stillstand gekommen sind ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten (Freigabe für das Bodenpersonal), alle 6 **FUEL PUMPS** auf **OFF** schalten.
+    *   **ENG MASTER 1 & 2:** Nach Verifizierung der 3-minütigen Abkühlzeit auf **OFF** schalten.
+    *   Sobald die Triebwerke vollständig zum Stillstand gekommen sind ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten, alle 6 **FUEL PUMPS** auf **OFF** schalten.
     *   **SEAT BELTS** auf **OFF** schalten (akustisches Signal zum Abschnallen und Aussteigen).
 
-> **Transit- / Turnaround-Hinweis:**
-> Wenn ein direkter Weiterflug (Folgesegment) geplant ist, werden die Triebwerke am Gate regulär ausgeschaltet (*Engine Shutdown Flow* oben). Der nachfolgende *Securing the Aircraft* Flow wird jedoch nicht ausgeführt. Stattdessen wird direkt in die [Transit SOP (Abschnitt 1: Arrival, Parking & Transit Setup)](transit-sop.md#1-arrival-parking--transit-setup) gewechselt (APU und APU BLEED verbleiben **ON**, ADIRS verbleiben in **NAV**).
+> **Transit- / Turnaround-Verfahren:**
+> Bei einem unmittelbaren Folgesegment entfällt die nachfolgende Prozedur *Securing the Aircraft*. Der Weiterflug erfolgt direkt gemäß [Transit SOP – Abschnitt 1: Arrival, Parking & Transit Setup](transit-sop.md#1-arrival-parking--transit-setup).
 
 *   **Securing the Aircraft:**
     *   **NO SMOKING** auf **OFF**, **EMER EXIT LT** auf **OFF**.
     *   **APU BLEED** auf **OFF**, **CREW SUPPLY** (Sauerstoff) auf **OFF**.
     *   ADIRS 1, 2, 3 nacheinander auf **OFF**, **NAV & LOGO** Light auf **OFF**.
+    *   **Brake Fan Check:** ECAM WHEEL-Seite prüfen. Verifizieren, dass die Bremstemperaturen unter 150°C liegen und **BRK FAN** auf **OFF** steht.
     *   **APU MASTER SW** auf **OFF**.
     *   Zuletzt **BAT 1** und **BAT 2** auf **OFF** schalten.
 

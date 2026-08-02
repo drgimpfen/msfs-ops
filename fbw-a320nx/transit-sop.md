@@ -29,11 +29,12 @@ Nachdem das Flugzeug am Gate positioniert, die Parkbremse gesetzt und die Klimat
     *   Die Triebwerke nacheinander abschalten (**ENG MASTER 1** und **2** auf **OFF**).
     *   Da die APU bereits während des Einrollens gestartet wurde und **APU BLEED** am Standplatz auf **ON** geschaltet wurde, verbleiben **APU** und **APU BLEED** durchgehend auf **ON**. Es wird komplett auf eine externe GPU verzichtet.
 *   **Cockpit Leftover Management & Bodensicherheit (Transit-Zustand):**
-    *   **BEACON Light:** Sobald die Triebwerke auslaufen ($N_1 < 5\%$), das **BEACON** Light auf **OFF** schalten (Freigabe für die Bodencrew, dass gefahrlos am Flugzeug gearbeitet werden kann).
+    *   **BEACON Light:** Sobald die Triebwerke auslaufen ($N_1 < 5\%$), das **BEACON** Light auf **OFF** schalten.
     *   **Anti-Glare & Ground Crew Safety:** **NOSE** Light und **RWY TURN OFF** Lights werden sofort nach dem Anhalten am Gate auf **OFF** geschaltet, um Marshaller, Jetway-Operator und Bodenpersonal nicht zu blenden.
     *   **Lichter-Management:** **NAV & LOGO** verbleibt auf **1** (oder **2**), **STROBE** auf **AUTO**, **LANDING** Lights auf **OFF**.
     *   **Avionik:** Die Avionik (ADIRS 1, 2, 3) verbleibt während des gesamten Turnarounds im **NAV**-Modus (keine Neuausrichtung erforderlich).
     *   **Passagiersignale:** **SEAT BELTS** auf **OFF** schalten, **NO SMOKING** auf **ON** oder **AUTO** und **EMER EXIT LT** auf **ARM** belassen.
+    *   **BRK FAN:** ECAM WHEEL-Seite prüfen. Bei Bremstemperaturen über 150°C am Standplatz auf **ON** schalten.
 
 ---
 
@@ -81,6 +82,7 @@ Sobald die MCDU-Programmierung abgeschlossen ist, das Boarding dem Ende zugeht u
 
 *   **Nahtloser Anschluss:** 
     *   Abschließende Schritte des Boardings durchführen (Schließen der Türen über das EFB).
+    *   **Brake Fan Check:** ECAM WHEEL-Seite prüfen. Verifizieren, dass die Bremstemperaturen unter 150°C liegen und **BRK FAN** auf **OFF** steht.
     *   Da die APU bereits läuft und **APU BLEED** bereits auf **ON** steht, entfällt der APU-Startschritt und die Druckluftversorgung für den Triebwerksstart ist sofort verfügbar.
     *   Die Prozedur wechselt an dieser Stelle direkt zu [Standard SOP – Abschnitt 2: Engine Start & Pushback](sop.md#2-engine-start--pushback) für das Einholen der Pushback- / Start-Freigabe und das Einschalten des **BEACON** Lights. Nach dem erfolgreichen Anlassen beider Triebwerke werden **APU BLEED** und **APU MASTER SW** gemäß Standard-SOP auf **OFF** geschaltet.
     *   Der Flug wird ab diesem Punkt exakt nach der Haupt-SOP fortgeführt.
