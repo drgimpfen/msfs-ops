@@ -100,3 +100,14 @@ Bei jeder SOP-Erstellung oder -Überarbeitung müssen folgende Regeln strikt ein
    - Innerhalb aller Markdown-Dokumente (SOPs, READMEs etc.) müssen Verlinkungen zu anderen Dateien oder Abschnitten konsequent als **relative Links** (z. B. `transit-sop.md` oder `sop.md#2-engine-start--pushback`) ausgeführt werden.
    - Absolute Pfade oder lokale Schema-Links (wie `file:///...` oder `c:/...`) dürfen niemals in den Repository-Dateien verwendet werden.
 
+---
+
+## 5. Planungs- & Umsetzungsmodus (Modus-Wechsel)
+
+- **Zielsetzung:** Ermöglichung eines Modell-Wechsels durch den Anwender (z. B. Modell mit hoher Denkfähigkeit High für die Planung und kosten- oder leistungseffizientes Modell Medium/Low für die Dokumentations-Umsetzung).
+- **Planungsmodus:**
+  - Im Planungsmodus finden ausschließlich Analysen, Recherchen, Konzepterstellungen sowie die Erstellung/Anpassung von Projekt- und allgemeinen Dokumentations-Dateien (z. B. `AGENTS.md`, `README.md`) statt.
+  - Es dürfen im Planungsmodus keinerlei SOP- bzw. Dokumentations-Dateien des Projekts (wie z. B. `sop.md`, `transit-sop.md`) erstellt oder verändert werden.
+- **Umsetzungsmodus:**
+  - Vor der Erstellung oder Änderung von SOP-Dateien muss zwingend in den **Umsetzungsmodus** gewechselt werden.
+  - Alle Restriktionen des Umsetzungsmodus (Vorab-Erläuterung aller geänderten Dateien im Chat und explizite Bestätigung vor der Ausführung) gelten uneingeschränkt weiter.

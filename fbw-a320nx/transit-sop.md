@@ -58,10 +58,9 @@ Für das Folgesegment muss das FMGS bereinigt und vollständig neu programmiert 
 *   **ATC IFR Clearance (ATC):**
     *   Vor Abschluss des Boardings Delivery via ATC kontaktieren: *"Request IFR Clearance"*. Die neue Freigabe, initiale Steigflughöhe und den neuen Squawk-Code an der FCU bzw. am Transponder einstellen.
 *   **Bereinigung des alten Flugplans (Detaillierter Reset-Workflow):**
-    *   Im FlyByWire A320NX dient der **INIT-A-Uplink** als primärer Reset-Mechanismus:
-    *   Taste **INIT** drücken und über den Line Select Key (LSK) neben **INIT REQUEST** die neuen SimBrief-Daten für das Folgesegment anfordern.
-    *   Das System erkennt automatisch das neue *FROM/TO*-Paar. Durch Bestätigen/Überschreiben der INIT-A-Seite löscht und ersetzt das FMGS den alten Flugplan-Verlauf automatisch.
-    *   *Alternative (manueller Clean-up in der F-PLN Seite):* Falls Reste des alten Flugplans im **F-PLN** verbleiben, die Taste **F-PLN** drücken, den alten Abflughafen oder verbliebenen Wegpunkt auswählen, **CLR** drücken und auf den entsprechenden LSK klicken, bis eine saubere Ausgangsbasis entsteht.
+    *   **SimBrief ATSU Uplink:** Taste **MCDU MENU** drücken $\rightarrow$ LSK **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ LSK **INIT DATA REQ** drücken, um die neuen Flugplandaten des Folgesegments im Flugcomputer bereitzustellen.
+    *   **INIT-A-Reset:** Taste **INIT** drücken und den Line Select Key (LSK) neben **INIT REQUEST** betätigen. Das System übernimmt das neue *FROM/TO*-Paar und ersetzt den alten Flugplan-Verlauf automatisch.
+    *   **Manuelle Flugplan-Bereinigung:** Falls Reste des alten Flugplans im **F-PLN** verbleiben, die Taste **F-PLN** drücken, den alten Abflughafen oder verbliebenen Wegpunkt auswählen, **CLR** drücken und auf den entsprechenden LSK klicken, bis eine saubere Ausgangsbasis entsteht.
 *   **Detaillierte Neuprogrammierung der MCDU:**
     *   **INIT A Seite:** Nach dem Uplink überprüfen, ob **FROM/TO**, **FLT NBR**, **COST INDEX** und die neue Reiseflughöhe (**CRZ FL**) korrekt übernommen wurden.
     *   **F-PLN Seite:** Taste **F-PLN** drücken.
@@ -74,7 +73,6 @@ Für das Folgesegment muss das FMGS bereinigt und vollständig neu programmiert 
         *   Die neuen V-Speeds (**V1**, **VR**, **V2**) für den bevorstehenden Start eintragen.
         *   Die neue **FLEX TEMP** eintragen.
         *   Die neue Start-Trimmung bei **THS/FLAPS** eintragen (z. B. `1/UP0.5`).
-        *   *Hinweis zur APPR Phase:* Die **APPR**-Seite bleibt am Boden unberührt; sie wird laut Standard-SOP erst im Sinkflug ausgefüllt.
 
 ---
 

@@ -41,19 +41,42 @@ Der Flug beginnt am Gate im komplett stromlosen Zustand. Ziel dieser Phase ist d
 ---
 
 ### 2. Engine Start & Pushback
-Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
+Vorbereitung und Durchführung des Zurückschiebens sowie des Anlassens beider Triebwerke.
 
-*   **APU Start:** Ca. 10 Minuten vor dem Pushback **APU MASTER SW** auf **ON** und anschließend **APU START** auf **ON** schalten. Sobald auf dem ECAM *APU AVAIL* erscheint: **APU BLEED** auf **ON** schalten.
-*   **Bodenstrom abkoppeln:** **EXT PWR** am Overhead Panel ausschalten und über das EFB trennen lassen.
-*   **ATC Freigabe & Beacon Light:** Bei ATC (GND): *"Request Pushback and Engine Start"*. Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Bodenpersonal den bevorstehenden Pushback und Triebwerksstart.
-*   **Before Start Flow & Checklist:** Parkbremse lösen und Before Start Checklist abarbeiten.
-*   **Triebwerksanlass-Prozedur:**
-    *   Den **ENG MODE SELECTOR** (Mittelkonsole) auf **IGN/START** drehen.
-    *   **ENG MASTER 2** auf **ON** schieben.
-    *   *Überwachung:* N2-Anstieg, Zündung, Fuel Flow und EGT-Anstieg kontrollieren.
-    *   Sobald Triebwerk 2 stabil läuft (*AVAIL* im ECAM), **ENG MASTER 1** auf **ON** schieben.
-    *   Nachdem beide Triebwerke stabil laufen (*AVAIL*): **ENG MODE SELECTOR** zurück auf **NORM** stellen.
-    *   **APU BLEED** auf **OFF** und **APU MASTER SW** auf **OFF** schalten.
+*   **APU Start (ca. 10 Min vor Pushback):**
+    *   **APU MASTER SW** auf **ON** schalten.
+    *   **APU START** auf **ON** schalten (ON-LED leuchtet).
+    *   Sobald auf dem ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten (Zapfluft- & Klimatisierungsübernahme).
+*   **Bodenstrom trennen (GPU Disconnect):**
+    *   **EXT PWR** am Overhead Panel auf **OFF** schalten (blaue ON-Anzeige erlischt, grüne AVAIL-Anzeige bleibt).
+    *   Im FlyPad (EFB) unter *Ground Services* die Bodenstromversorgung (GPU) abkoppeln lassen.
+*   **ATC Freigabe & Beacon Light:**
+    *   Bei ATC (GND): *"Request Pushback and Engine Start"* anfordern.
+    *   Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Vorfeldverkehr den unmittelbaren Beginn der Pushback- und Anlasssequenz.
+*   **Before Start Flow & Checklist:**
+    *   **THRUST LEVERS:** Verifizieren, dass beide Schubhebel in der **IDLE**-Raste stehen.
+    *   **PARKING BRAKE:** Bleibt vorerst auf **ON** gesetzt.
+    *   Before Start Checklist abarbeiten.
+*   **Pushback-Initiierung & Schlepper-Kopplung:**
+    *   Pushback-Vorgang über das EFB, den MSFS-Groundservice oder BeyondATC/Toolbar-Pushback auslösen.
+    *   Das Ankoppeln des Schleppers abwarten.
+    *   Sobald die Bodencrew / der Schlepper meldet: *"Pushback tractor connected, release parking brake"*:
+        *   **PARKING BRAKE** auf **OFF** schalten.
+*   **Triebwerksanlass-Prozedur (Engine Start Flow):**
+    *   Den **ENG MODE SELECTOR** (Mittelkonsole) von NORM auf **IGN/START** drehen (ECAM schaltet automatisch auf die ENG-Seite um und zeigt Zapfluftdruck an).
+    *   **Start Triebwerk 2 (Rechtes Triebwerk zuerst):**
+        *   **ENG MASTER 2** auf **ON** schieben.
+        *   *ECAM-Überwachung:* $N_2$-Anstieg beobachten. Bei $N_2 \ge 16\%$ erfolgt die Zündung (IGN-Anzeige). Treibstofffluss (Fuel Flow) und Abgastemperatur (EGT) steigen an, gefolgt vom $N_1$-Anstieg. Bei ca. $50\% N_2$ klinkt der Starter aus. Bei ca. $58–60\% N_2$ erscheint im ECAM grün *AVAIL* $\rightarrow$ Triebwerk 2 läuft stabil.
+    *   **Start Triebwerk 1 (Linkes Triebwerk):**
+        *   Sobald Triebwerk 2 *AVAIL* zeigt: **ENG MASTER 1** auf **ON** schieben.
+        *   Identische ECAM-Überwachung ($N_2 \rightarrow$ Zündung $\rightarrow$ FF/EGT $\rightarrow N_1 \rightarrow$ *AVAIL*) durchführen.
+*   **After Start Flow (Nach Ende von Pushback & Engine Start):**
+    *   Sobald die Maschine auf der Rollgasse zum Stehen kommt und der Pushback beendet ist:
+        *   **PARKING BRAKE** auf **ON** setzen (Rückmeldung an Bodencrew: *"Parking brake set"*).
+    *   **ENG MODE SELECTOR:** Den **ENG MODE SELECTOR** zurück auf **NORM** drehen, sobald beide Triebwerke stabil laufen (grünes *AVAIL* im ECAM).
+    *   **APU BLEED** auf **OFF** schalten.
+    *   **APU MASTER SW** auf **OFF** schalten (APU kühlt herunter und schaltet ab).
+    *   Entkoppeln des Schleppers bestätigen lassen und auf das finale Signal der Bodencrew (Bypass-Pin gezeigt) an der Cockpit-Seite achten.
 
 ---
 
@@ -65,8 +88,15 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
     *   **GND SPOILERS** armieren (Speed Brake Hebel nach oben ziehen).
     *   **PITCH TRIM** Wheel auf den berechneten CG-Wert aus der MCDU einstellen (z. B. 0.5 UP).
     *   **AUTOBRAKE** auf **MAX** setzen.
+*   **Wetterradar & Anti-Ice Setup:**
+    *   **WXR RADAR PANEL:** **SYS** auf **1** (oder **2**), **PWS** auf **AUTO**, **MODE** auf **WX** oder **WX+T** stellen.
+    *   **ENG ANTI ICE:** Bei OAT $\le 10^\circ\text{C}$ und sichtbarer Feuchtigkeit (Nebel, Regen, Schnee, Nässe am Boden) **ENG ANTI ICE 1 & 2** auf **ON** schalten.
+*   **Transponder & TCAS Setup:**
+    *   **ATC / XPDR MODE:** Auf **AUTO** (oder **ON**) stellen.
+    *   **ALT RPTG:** Auf **ON** stellen.
+    *   **TCAS MODE:** Auf **TA/RA** stellen.
 *   **Flight Controls Check:** ECAM F/CTL Page überwachen: Stick Full Up, Down, Neutral; Stick Full Left, Right, Neutral; Rudder Pedals Full Left, Right, Neutral.
-*   **Flight Instruments Check:** Den blauen **T/O CONFIG** Button auf der Mittelkonsole drücken (alle Memos im ECAM müssen grün sein).
+*   **Flight Instruments & T/O CONFIG Test:** Den blauen **T/O CONFIG** Button auf der Mittelkonsole **einmalig** drücken. Dies testet die technische Startkonfiguration (Klappen, Trimmung, Spoiler). Die ECAM-Zeile **CABIN READY** verbleibt vorerst auf blau **CHECK**, bis das Kabinensignal eintrifft.
 
 ---
 
@@ -74,10 +104,13 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Triebwerksstarts.
 Ankunft am Holding Point der aktiven Startbahn.
 
 *   **ATC Freigabe:** Bei ATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
-*   **Lichter für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
+*   **Lichter & System-Check für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
     *   **STROBE** von AUTO auf **ON** schalten.
     *   **LANDING** Lights (beide) auf **ON** schalten.
     *   **NOSE** Light von TAXI auf **T.O.** (Takeoff) schalten.
+    *   **CALLS PANEL (Overhead):** Den **ALL**-Knopf drücken (oder **SEAT BELTS** Signs triggern), um der Kabinenbesatzung den unmittelbaren Startlauf zu signalisieren (*"Cabin Crew, take your seats for takeoff"*).
+    *   **TCAS & PWS Check:** Verifizieren, dass **TCAS** auf **TA/RA** und **PWS** auf **AUTO** steht.
+    *   **ECAM T/O MEMO Sichtprüfung:** Sobald die Kabine bereit ist, wechselt `CABIN READY` im ECAM automatisch auf **grün**. Visuell verifizieren, dass alle Zeilen im ECAM T/O MEMO grün sind.
 *   **Takeoff Roll:**
     *   **THRUST LEVERS** auf ca. 50% N1 vorschieben und Stabilisierung abwarten.
     *   Schubhebel in die **FLEX**- oder **TOGA**-Raste stellen.
@@ -93,6 +126,8 @@ Ankunft am Holding Point der aktiven Startbahn.
     *   **Acceleration Altitude & Clean Up:** Bei Erreichen der Acceleration Altitude senkt sich der Pitch zur Beschleunigung. Beobachtung des Speed Tapes im PFD:
         *   Sobald die Geschwindigkeit die S-Speed übersteigt: Klappen auf **FLAPS 0** einfahren.
         *   Anschließend den Speed-Brake-Hebel manuell nach unten drücken, um die **GND SPOILERS** zu disarmieren.
+*   **Transition Altitude (Baro Reference Switch):**
+    *   Beim Passieren der im MCDU/SID definierten Transition Altitude (Blinken der Baro-Druckanzeige im PFD): den **BARO**-Knopf ziehen (**BARO KNOB PULL**), um von QNH auf **STD** (Standard 1013.25 hPa / 29.92 inHg) umzuschalten.
 *   **10.000 ft AAL (Climb):**
     *   **LANDING** Lights auf **OFF**. **NOSE** Light auf **OFF**. **RWY TURN OFF** Lights auf **OFF**.
     *   **SEAT BELTS** auf **OFF** schalten (sofern wetter- und betriebsbedingt möglich).
@@ -145,34 +180,39 @@ Ankunft am Holding Point der aktiven Startbahn.
 ---
 
 ### 7. After Landing, Taxi & Shutdown
-Sicheres Einrollen und Abstellen des Flugzeugs am Gate.
+Sicheres Einrollen, Abstellen und vollständiges Herunterfahren des Flugzeugs am Gate.
 
 *   **Runway Vacated (Nach Verlassen der Startbahn):**
-    *   **STROBE** zurück auf **AUTO**, **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**.
-    *   **FLAPS** auf **0** einfahren, **GND SPOILERS** disarmieren.
-*   **ATC Freigabe:** Rollfreigabe zum Gate via ATC anfordern.
-*   **Triebwerkskühlung & APU Start:** Nach Verlassen der Piste **APU MASTER SW** auf **ON** und **APU START** auf **ON** schalten (Triebwerks-Abkühlzeit von ca. 3 Minuten beachten).
+    *   Nach der Landung bei ca. 70 Knoten **REVERSERS** einfahren. Bei 40 Knoten manuell ausrollen und die Piste an einer geeigneten Abrollbahn verlassen.
+    *   Sobald die gelbe Holding-Linie vollständig überrollt ist: **STROBE** von ON auf **AUTO** (oder **OFF**), **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**.
+    *   **RWY TURN OFF** Lights beim Verlassen des aktiven Rollbahnbereichs auf **OFF** schalten.
+    *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten (Bodenpersonal- & Strahlungsschutz).
+    *   **TCAS & XPDR:** **TCAS MODE** auf **STBY** (oder `TA ONLY`), **ATC/XPDR MODE** auf **AUTO** / **STBY**.
+    *   **FLAPS:** Klappen auf **0** einfahren (bei Matsch, Schnee oder Vereisungsgefahr auf den Rollwegen Klappen ausgefahren lassen).
+    *   **GND SPOILERS:** Spoilers disarmieren (Hebel manuell nach unten drücken).
+    *   **ENG ANTI ICE:** Falls zuvor aktiviert, ausschalten (sofern keine Vereisungsbedingungen auf den Taxiways vorliegen).
+*   **Taxi to Gate & APU Management:**
+    *   Rollfreigabe zum Gate bei ATC anfordern (*"Request taxi to gate"*).
+    *   Triebwerks-Abkühlzeit beachten: Die Triebwerke benötigen vor dem Abschalten mindestens **3 Minuten** Stabilisierung bei Idle-Schub.
+    *   Ca. 3 Minuten vor Erreichen der Parkposition **APU MASTER SW** auf **ON** und **APU START** auf **ON** schalten.
 *   **Parking / Gate Arrival:**
-    *   Am Gate stoppen, **PARKING BRAKE** auf **ON** setzen.
-    *   **Lichter zur Vermeidung von Blendschutz (Ground Crew Safety):** Unmittelbar nach dem Anhalten am Gate das **NOSE** Light auf **OFF** und die **RWY TURN OFF** Lights auf **OFF** schalten, um Marshaller, Jetway-Operator und Bodenpersonal nicht zu blenden.
-    *   Über das EFB den Jetway anfordern.
-    *   Sobald im ECAM *APU AVAIL* angezeigt wird, **APU BLEED auf ON schalten**, um die Klimatisierung nahtlos auf die APU zu übernehmen.
+    *   **Ground Crew Safety:** Beim Eindrehen in den Standplatz (Sichtkontakt mit Marshaller / VDGS) das **NOSE** Light (Taxi) auf **OFF** schalten, um den Einweiser nicht zu blenden.
+    *   Flugzeug exakt auf der Stop-Markierung anhalten, **PARKING BRAKE** auf **ON** setzen.
+    *   Sobald im ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten.
+    *   Über das FlyPad (EFB) den Jetway/Fluggastbrücke bzw. die Passagiertreppe anfordern (falls GPU genutzt wird: **EXT PWR** auf **ON** schalten).
+*   **Engine Shutdown Flow:**
+    *   Nach Verifizierung der 3-minütigen Abkühlzeit **ENG MASTER 1** und **ENG MASTER 2** auf **OFF** schalten.
+    *   Sobald die Triebwerke vollständig zum Stillstand gekommen sind ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten (Freigabe für das Bodenpersonal), alle 6 **FUEL PUMPS** auf **OFF** schalten.
+    *   **SEAT BELTS** auf **OFF** schalten (akustisches Signal zum Abschnallen und Aussteigen).
 
 > **Transit- / Turnaround-Hinweis:**
-> Wenn ein direkter Weiterflug (Folgesegment) geplant ist, wird der nachfolgende reguläre Shutdown Flow nicht ausgeführt. Stattdessen wird direkt in die [Transit SOP (Abschnitt 1: Arrival, Parking & Transit Setup)](transit-sop.md#1-arrival-parking--transit-setup) gewechselt (APU und APU BLEED verbleiben **ON**, ADIRS verbleiben in **NAV**).
+> Wenn ein direkter Weiterflug (Folgesegment) geplant ist, werden die Triebwerke am Gate regulär ausgeschaltet (*Engine Shutdown Flow* oben). Der nachfolgende *Securing the Aircraft* Flow wird jedoch nicht ausgeführt. Stattdessen wird direkt in die [Transit SOP (Abschnitt 1: Arrival, Parking & Transit Setup)](transit-sop.md#1-arrival-parking--transit-setup) gewechselt (APU und APU BLEED verbleiben **ON**, ADIRS verbleiben in **NAV**).
 
-*   **Shutdown Flow:**
-    *   **ENG MASTER 1** und **ENG MASTER 2** auf **OFF** schalten.
-    *   Nach Stillstand der Triebwerke ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten (Freigabe für das Bodenpersonal), alle **FUEL PUMPS** auf **OFF** schalten.
-
-*   **Passagiersignale ausschalten:**
-    *   **SEAT BELTS** auf **OFF**, **NO SMOKING** auf **OFF**, **EMER EXIT LT** auf **OFF**.
-
-*   **Final Shutdown (Cold & Dark):**
-    *   **CREW SUPPLY** auf **OFF**.
-    *   ADIRS 1, 2, 3 auf **OFF**.
-    *   **NAV & LOGO** Light auf **OFF**.
-    *   **APU BLEED** auf **OFF**, **APU MASTER SW** auf **OFF**.
+*   **Securing the Aircraft:**
+    *   **NO SMOKING** auf **OFF**, **EMER EXIT LT** auf **OFF**.
+    *   **APU BLEED** auf **OFF**, **CREW SUPPLY** (Sauerstoff) auf **OFF**.
+    *   ADIRS 1, 2, 3 nacheinander auf **OFF**, **NAV & LOGO** Light auf **OFF**.
+    *   **APU MASTER SW** auf **OFF**.
     *   Zuletzt **BAT 1** und **BAT 2** auf **OFF** schalten.
 
-Das Flugzeug befindet sich wieder im vollständigen Cold & Dark Zustand.
+Das Flugzeug befindet sich wieder im vollständigen, stromlosen Cold & Dark Zustand.
