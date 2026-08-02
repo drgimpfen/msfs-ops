@@ -111,3 +111,16 @@ Bei jeder SOP-Erstellung oder -Überarbeitung müssen folgende Regeln strikt ein
 - **Umsetzungsmodus:**
   - Vor der Erstellung oder Änderung von SOP-Dateien muss zwingend in den **Umsetzungsmodus** gewechselt werden.
   - Alle Restriktionen des Umsetzungsmodus (Vorab-Erläuterung aller geänderten Dateien im Chat und explizite Bestätigung vor der Ausführung) gelten uneingeschränkt weiter.
+
+---
+
+## 6. Git Commit Workflow & Co-Authoring Rules
+
+1. **Zusammenfassung & Vorschlag im Chat:**
+   - Am Ende einer Bearbeitung oder auf Anforderung werden alle geänderten Punkte kurz auf Deutsch zusammengefasst.
+   - Es wird eine englische Commit-Nachricht (Subject Line & Bullet Points) im Chat vorgeschlagen.
+2. **Co-Authoring Header:**
+   - Jede Commit-Nachricht schließt zwingend mit dem Co-Authoring-Header des verwendeten KI-Modells ab:
+     `Co-authored-by: Gemini 3.6 Flash <gemini-ai@google.com>`
+3. **Ausführung via Chat:**
+   - Nach Bestätigung durch den Anwender wird der Commit direkt über das Terminal-Tool ausgeführt (`git add` & `git commit`).
