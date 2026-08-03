@@ -143,7 +143,7 @@ Diese Phase umfasst den Reiseflug sowie die Vorbereitung auf die Landung. Ziel i
 > Die Reiseflugphase dient der frühzeitigen Anflugvorbereitung und dem Briefing (*Aviate, Navigate, Communicate*). Das Energiemanagement hat stets Priorität. Eine Plausibilitätsprüfung des Sinkflugs (3 NM Distanz pro 1.000 ft Höhenverlust) ist durchzuführen.
 
 *   **Reiseflug-Überwachung:** Regelmäßige Überprüfung des Treibstoffs (MCDU PROG Page).
-*   **Wetter & Arrival Clearance (ATC Handoff):** Ca. 100 NM vor the Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via ATC durchführen und Arrival/Approach Clearance bestätigen lassen.
+*   **Wetter & Arrival Clearance (ATC Handoff):** Ca. 100 NM vor dem Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via ATC durchführen und Arrival/Approach Clearance bestätigen lassen.
 *   **Detailliertes MCDU Arrival Setup:**
     *   Taste **F-PLN** drücken, zum Zielflughafen scrollen und **ARRIVAL** wählen.
     *   Anflugverfahren (z. B. ILS 08R), STAR und VIA auswählen und mit **INSERT** bestätigen.
