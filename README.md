@@ -10,6 +10,10 @@ Dieses Repository enthält hochgradig praxisnahe, chronologische Standard Operat
 - [Standard Operating Procedures (SOP)](fbw-a320nx/sop.md) – Vollständiger Ablauf von Cold & Dark bis Shutdown.
 - [Transit SOP (Turnaround)](fbw-a320nx/transit-sop.md) – Zeitoptimierter Transit-Ablauf gemäß Airbus FCOM für Multistop-Legs.
 
+### 2. Airbus A330 Family (A330-200 & A330-300P2F)
+- [Standard Operating Procedures (SOP)](a330/sop.md) – Vollständiger Ablauf von Cold & Dark bis Shutdown (Pax & Cargo).
+- [Transit SOP (Turnaround)](a330/transit-sop.md) – Zeitoptimierter Transit-Ablauf für Quick Turnarounds.
+
 ---
 
 ## 📋 Standards & Qualitätskriterien

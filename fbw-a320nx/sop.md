@@ -17,7 +17,7 @@ Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **F
 ---
 
 ### 1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Gate)
-Der Flug beginnt am Gate im komplett stromlosen Zustand. Ziel dieser Phase ist die elektrische Bestromung, die Koordinierung der Bodenabfertigung und die vollständige Programmierung des FMGS (Flight Management Guidance System).
+Der Flug beginnt im stromlosen Zustand am Gate oder Standplatz. Ziel dieser Phase ist die Herstellung der elektrischen Versorgungsbereitschaft, die Abwicklung der Bodenabfertigung (Betankung, Beladung, Boarding) sowie die vollständige Programmierung und Initialisierung der Navigations- und Flugmanagementsysteme (FMGS/MCDU).
 
 *   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** einschalten. Das FlyPad (EFB) an der linken Seite hochfahren.
 *   **Initiale Lichter am Boden:** Direkt nach der Bestromung das **NAV & LOGO** Light auf **1** (oder **2**) schalten. Dies signalisiert dem Bodenpersonal die elektrische Versorgungsbereitschaft des Flugzeugs.
@@ -41,7 +41,7 @@ Der Flug beginnt am Gate im komplett stromlosen Zustand. Ziel dieser Phase ist d
 ---
 
 ### 2. Engine Start & Pushback
-Vorbereitung und Durchführung des Zurückschiebens sowie des Anlassens beider Triebwerke.
+Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebnahme der Hilfskraftanlage (APU), die Abkopplung von Bodenstrom und Bodenabfertigung, die Durchführung des Zurückschiebens (Pushback) sowie das sichere Anlassen beider Triebwerke.
 
 *   **APU Start (ca. 10 Min vor Pushback):**
     *   **APU MASTER SW** auf **ON** schalten.
@@ -81,6 +81,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Anlassens beider T
 ---
 
 ### 3. Taxi & Vorbereitung zum Start
+Diese Phase beinhaltet das Einrollen zur aktiven Startbahn. Ziel ist das sichere Manövrieren am Boden, das Konfigurieren aller flight-relevanten Systeme (Klappen, Trimming, Spoilers, WXR/TCAS) sowie die finale technische Startüberprüfung (T/O Config & Flight Controls Check).
 
 *   **ATC Freigabe & Rollbeleuchtung:** Bei ATC: *"Request Taxi"*. Nach Erhalt der Rollfreigabe im *After Start / Taxi Flow* das **NOSE** Light auf **TAXI** schalten. Beim Rollen auf oder über Landebahnen und Taxiways zusätzlich die **RWY TURN OFF** Lights auf **ON** schalten.
 *   **After Start Flow / T/O Config:**
@@ -102,7 +103,7 @@ Vorbereitung und Durchführung des Zurückschiebens sowie des Anlassens beider T
 ---
 
 ### 4. Takeoff & Departure
-Ankunft am Holding Point der aktiven Startbahn.
+Ankunft am Holding Point und Durchführung des Startlaufs. Ziel dieser Phase ist das Einholen der Startfreigabe, das Herstellen der Startkonfiguration und Triebwerksleistung, der sichere Abhebevorgang sowie der Erststeigflug und die Übergangsanpassung im Steigprofil (Thrust Reduction & Clean-Up).
 
 *   **ATC Freigabe:** Bei ATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
 *   **Lichter & System-Check für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
@@ -136,12 +137,13 @@ Ankunft am Holding Point der aktiven Startbahn.
 ---
 
 ### 5. Cruise, Descent Planning & Approach Setup
+Diese Phase umfasst den Reiseflug sowie die Vorbereitung auf die Landung. Ziel ist die kontinuierliche System- und Treibstoffüberwachung, das Einholen der aktuellen Anflugwetterdaten sowie die vollständige MCDU/FCU-Programmierung für den Sink- und Endanflug.
 
 > **Airmanship & Workload Management:**
 > Die Reiseflugphase dient der frühzeitigen Anflugvorbereitung und dem Briefing (*Aviate, Navigate, Communicate*). Das Energiemanagement hat stets Priorität. Eine Plausibilitätsprüfung des Sinkflugs (3 NM Distanz pro 1.000 ft Höhenverlust) ist durchzuführen.
 
 *   **Reiseflug-Überwachung:** Regelmäßige Überprüfung des Treibstoffs (MCDU PROG Page).
-*   **Wetter & Arrival Clearance (ATC Handoff):** Ca. 100 NM vor dem Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via ATC durchführen und Arrival/Approach Clearance bestätigen lassen.
+*   **Wetter & Arrival Clearance (ATC Handoff):** Ca. 100 NM vor the Top of Descent (TOD) ATIS abrufen, Frequenzwechsel via ATC durchführen und Arrival/Approach Clearance bestätigen lassen.
 *   **Detailliertes MCDU Arrival Setup:**
     *   Taste **F-PLN** drücken, zum Zielflughafen scrollen und **ARRIVAL** wählen.
     *   Anflugverfahren (z. B. ILS 08R), STAR und VIA auswählen und mit **INSERT** bestätigen.
@@ -160,6 +162,7 @@ Ankunft am Holding Point der aktiven Startbahn.
 ---
 
 ### 6. Approach & Landing
+Diese Phase beschreibt den Sink- und Endanflug bis zum Aufsetzen. Ziel ist das Herstellen der Landekonfiguration, das Erfassen des Anflugpfades (z. B. ILS Localizer & Glideslope), der zeitgerechte Übergang in den manuellen Flug sowie die sichere Landung und Abbremsung auf der Piste.
 
 > **Airmanship & Deceleration Tips:**
 > Zur Vermeidung von "High and Fast"-Szenarien können bei ATC-Abkürzungen frühzeitig die **SPEED BRAKES** (bis zur Hälfte) in Kombination mit **OP DES** oder das Ausfahren des Fahrwerks (**GEAR DOWN**) als Luftwiderstand genutzt werden.
