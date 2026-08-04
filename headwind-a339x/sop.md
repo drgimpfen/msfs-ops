@@ -1,12 +1,12 @@
-# iniBuilds Airbus A330-300P2F (Cargo) – Standard Operating Procedures (SOP)
+# Headwind Airbus A330-900neo (A339X) – Standard Operating Procedures (SOP)
 
-Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **iniBuilds Airbus A330-300P2F** (Freighter) im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup am Cargo Stand bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **iniBuilds EFB (Tablet)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
+Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **Headwind Airbus A330-900neo (A339X)** (Passagier) im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup am Gate bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **FlyByWire flyPad (EFB)**, der **FBW ATSU Systems Core** MCDU-Architektur und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
 
 > **Transit- / Turnaround-Hinweis:**
 > Bei kurzen Zwischenstopps ohne vollständiges Herunterfahren des Flugzeugs kann direkt die zeitoptimierte [Transit SOP](transit-sop.md) genutzt werden.
 
 ## Inhaltsverzeichnis
-- [1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Cargo Stand)](#1-pre-flight--cockpit-vorbereitung-cold--dark-am-cargo-stand)
+- [1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Gate)](#1-pre-flight--cockpit-vorbereitung-cold--dark-am-gate)
 - [2. Engine Start & Pushback](#2-engine-start--pushback)
 - [3. Taxi & Vorbereitung zum Start](#3-taxi--vorbereitung-zum-start)
 - [4. Takeoff & Departure](#4-takeoff--departure)
@@ -16,32 +16,32 @@ Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **i
 
 ---
 
-### 1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Cargo Stand)
-Der Flug beginnt im stromlosen Zustand am Cargo Standplatz. Ziel dieser Phase ist die Herstellung der elektrischen Versorgungsbereitschaft, die Abwicklung der Fracht-Bodenabfertigung (Betankung, ULD Cargo Container Load, Main Deck Cargo Door) sowie die vollständige Programmierung und Initialisierung der Navigations- und Flugmanagementsysteme (FMGEC/MCDU).
+### 1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Gate)
+Der Flug beginnt im stromlosen Zustand am Gate. Ziel dieser Phase ist die Herstellung der elektrischen Versorgungsbereitschaft, die Abwicklung der Passagier-Bodenabfertigung (Betankung, Passagier-Boarding via Jetway / Stairs) sowie die vollständige Programmierung und Initialisierung der Navigations- und Flugmanagementsysteme (FlyByWire ATSU/MCDU).
 
-*   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** auf **ON** schalten. Das iniBuilds EFB (Tablet) hochfahren.
+*   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** auf **ON** schalten. Das FlyByWire flyPad (EFB) an der linken Seite hochfahren.
 *   **Initiale Lichter am Boden:** Direkt nach der Bestromung das **NAV & LOGO** Light auf **1** (oder **2**) schalten, um die Versorgungsbereitschaft dem Bodenpersonal anzuzeigen.
-*   **Ground Services & GPU (via EFB):** Im EFB unter *Ground Services* die Ground Power Unit (GPU) anfordern. Sobald am Overhead Panel das grüne *AVAIL*-Licht leuchtet, **EXT PWR** drücken (leuchtet blau *ON*).
-    *   Über das EFB / GSX die **Main Deck Cargo Door** öffnen und Cargo Loaders sowie ULD Container beistellen lassen.
-    *   Im EFB unter *Payload/Fuel* SimBrief-Daten laden und den Betankungs- sowie Beladungsprozess für Fracht initiieren.
+*   **Ground Services & GPU (via flyPad):** Im flyPad in das Menü *Ground Services* wechseln. Die Ground Power Unit (GPU) anfordern. Sobald am Overhead Panel das grüne *AVAIL*-Licht leuchtet, **EXT PWR** drücken (leuchtet blau *ON*).
+    *   Über das flyPad den Jetway (Fluggastbrücke) an das Flugzeug andocken.
+    *   Im flyPad unter *Payload/Fuel* SimBrief-Daten laden und das *Refueling* (Betankung) sowie den *Boarding*-Prozess für Passagiere und Gepäck starten.
 *   **Overhead Panel Setup:**
     *   **CREW SUPPLY** (Sauerstoff) auf **ON** schalten.
-    *   Treibstoffpumpen (**MAIN PUMPS 1 & 2**, **STANDBY PUMPS**, **CENTER PUMP**, **TRIM TANK PUMP**) auf **ON** bzw. **AUTO** prüfen.
+    *   Alle Treibstoffpumpen (**FUEL PUMPS**) auf **ON** bzw. **AUTO** verifizieren.
     *   Signale & Notbeleuchtung: **EMER EXIT LT** auf **ARM** setzen. **NO SMOKING** auf **ON** oder **AUTO** setzen. **SEAT BELTS** auf **ON** setzen.
-*   **ATC IFR Clearance:** Streckenfreigabe bei ATC (Delivery/Ground) einholen: *"Request IFR Clearance"*. Nach Erhalt die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen und Squawk am Transponder einstellen.
-*   **ADIRUs Initialisierung:** Auf dem Overhead Panel die drei ADIRS-Wahlschalter (1, 2, 3) von OFF auf **NAV** drehen.
-*   **Detailliertes MCDU / FMGEC Setup:**
+*   **ATC IFR Clearance:** Streckenfreigabe bei ATC (Delivery/Ground) einholen: *"Request IFR Clearance"*. Nach Erhalt von Route, initialer Steigflughöhe und Squawk-Code die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen.
+*   **ADIRUs Initialisierung:** Auf dem Overhead Panel die drei ADIRS-Wahlschalter (1, 2, 3) nacheinander von OFF auf **NAV** drehen.
+*   **Detailliertes MCDU / ATSU Setup (FlyByWire Architecture):**
     *   **SimBrief Uplink (AOC):** Taste **MCDU MENU** drücken $\rightarrow$ Line Select Key (LSK) **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ LSK **INIT DATA REQ**.
-    *   **INIT A Page:** Taste **INIT** drücken. LSK neben **INIT REQUEST** betätigen. **FROM/TO**, **FLT NBR**, **COST INDEX** und **CRZ FL** aus SimBrief übernehmen. Alignment auf GPS/ADIRS auf der MCDU verifizieren.
+    *   **INIT A Page:** Taste **INIT** drücken. LSK neben **INIT REQUEST** betätigen. Das System füllt **FROM/TO**, **FLT NBR**, **COST INDEX** und **CRZ FL** aus. Alignment auf GPS/ADIRS verifizieren.
     *   **F-PLN (Flight Plan):** Taste **F-PLN** drücken. Linken LSK neben Abflughafen wählen $\rightarrow$ LSK **DEPARTURE** $\rightarrow$ Startbahn und SID auswählen $\rightarrow$ LSK **INSERT** drücken. Enroute-Waypoints sowie STAR/Approach am Zielflughafen eingeben.
-    *   **INIT B Page:** Erneut **INIT** drücken und **NEXT PAGE** wählen. LSK neben **ZFW/ZFWCG** und **BLOCK** betätigen, um ZFW, Schwerpunkt (CG) und Block Fuel einzutragen.
-    *   **PERF Page:** Taste **PERF** drücken. Im EFB berechnete Startwerte für **V1**, **VR**, **V2**, **FLEX TO TEMP** sowie Klappen-/Trimmwert (**THS/FLAPS**, z. B. `1/UP0.8`) manuell eintragen.
-*   **Abschluss des Cargo Loadings:** Nach Abschluss des Beladungsprozesses die Main Deck Cargo Door über das EFB schließen.
+    *   **INIT B Page:** Erneut **INIT** drücken und **NEXT PAGE** wählen. Den rechten LSK neben **ZFW/ZFWCG** betätigen und zweimal den rechten LSK neben **BLOCK** drücken, um die Treibstoffwerte aus SimBrief zu übernehmen.
+    *   **PERF Page:** Taste **PERF** drücken. Die im flyPad berechneten Startwerte für **V1**, **VR**, **V2**, **FLEX TO TEMP** sowie Klappen-/Trimmwert (**THS/FLAPS**, z. B. `1/UP0.8`) manuell eintragen.
+*   **Abschluss des Boardings:** Nach Abschluss des Boardings (Anzeige im flyPad) den Jetway über das flyPad entfernen. Die Flugzeugtüren werden geschlossen.
 
 ---
 
 ### 2. Engine Start & Pushback
-Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebnahme der Hilfskraftanlage (APU), die Abkopplung von Bodenstrom und Bodenabfertigung, die Durchführung des Zurückschiebens (Pushback) sowie das sichere Anlassen beider Großfan-Triebwerke.
+Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebnahme der Hilfskraftanlage (APU), die Abkopplung von Bodenstrom und Bodenabfertigung, die Durchführung des Zurückschiebens (Pushback via GSX / Toolbar Pushback / MSFS) sowie das sichere Anlassen beider Rolls-Royce Trent 7000 Triebwerke.
 
 *   **APU Start (ca. 10 Min vor Pushback):**
     *   **APU MASTER SW** auf **ON** schalten.
@@ -49,7 +49,7 @@ Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebna
     *   Sobald auf dem ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten (Zapfluft- & Klimatisierungsübernahme).
 *   **Bodenstrom trennen (GPU Disconnect):**
     *   **EXT PWR** am Overhead Panel auf **OFF** schalten (blaue ON-Anzeige erlischt, grüne AVAIL-Anzeige bleibt).
-    *   Über das EFB unter *Ground Services* die Bodenstromversorgung (GPU) abkoppeln lassen.
+    *   Im flyPad unter *Ground Services* die Bodenstromversorgung (GPU) abkoppeln lassen.
 *   **ATC Freigabe & Beacon Light:**
     *   Bei ATC (Ground): *"Request Pushback and Engine Start"* anfordern.
     *   Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Vorfeldverkehr den Beginn der Anlasssequenz.
@@ -57,14 +57,13 @@ Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebna
     *   **THRUST LEVERS:** Beide Schubhebel in der **IDLE**-Raste verifizieren.
     *   **PARKING BRAKE:** Bleibt vorerst auf **ON** gesetzt.
     *   Before Start Checklist abarbeiten.
-*   **Pushback-Initiierung & Schlepper-Kopplung:**
-    *   Pushback-Vorgang über das EFB, den MSFS-Groundservice oder BeyondATC/GSX auslösen.
-    *   Das Ankoppeln des Schleppers abwarten.
-    *   Sobald die Bodencrew / der Schlepper meldet: *"Pushback tractor connected, release parking brake"*:
+*   **Pushback-Initiierung (GSX / Toolbar Pushback / MSFS):**
+    *   *Hinweis:* Da das flyPad im A339X kein eigenes Pushback-Menü besitzt, wird der Pushback über **GSX Pro**, das **Toolbar Pushback Mod** oder das MSFS-Menü (`Shift + P`) ausgelöst.
+    *   Sobald der Schlepper meldet: *"Pushback tractor connected, release parking brake"*:
         *   **PARKING BRAKE** auf **OFF** schalten.
-*   **Triebwerksanlass-Prozedur (Engine Start Flow):**
+*   **Triebwerksanlass-Prozedur (Engine Start Flow - Trent 7000):**
     *   Den **ENG MODE SELECTOR** (Mittelkonsole) von NORM auf **IGN/START** drehen (ECAM schaltet automatisch auf die ENG-Seite um und zeigt Zapfluftdruck an).
-    *   **Start Triebwerk 2 (Rechtes Großfan-Triebwerk zuerst):**
+    *   **Start Triebwerk 2 (Rechtes Triebwerk zuerst):**
         *   **ENG MASTER 2** auf **ON** schieben.
         *   *ECAM-Überwachung:* $N_2$-Anstieg beobachten. Bei $N_2 \ge 16\%$ erfolgt die Zündung (IGN-Anzeige). Treibstofffluss (Fuel Flow) und Abgastemperatur (EGT) steigen an, gefolgt vom $N_1$-Anstieg. Bei ca. $50\% N_2$ klinkt der Starter aus. Bei ca. $58–60\% N_2$ erscheint im ECAM grün *AVAIL* $\rightarrow$ Triebwerk 2 läuft stabil.
     *   **Start Triebwerk 1 (Linkes Triebwerk):**
@@ -85,7 +84,7 @@ Diese Phase beinhaltet das Einrollen zur aktiven Startbahn. Ziel ist das sichere
 
 *   **ATC Freigabe & Rollbeleuchtung:** Bei ATC: *"Request Taxi"*. Nach Erhalt der Rollfreigabe im *After Start / Taxi Flow* das **NOSE** Light auf **TAXI** schalten. Beim Rollen auf oder über Landebahnen und Taxiways zusätzlich die **RWY TURN OFF** Lights auf **ON** schalten.
 *   **After Start Flow / T/O Config:**
-    *   **FLAPS** auf berechnete Startstellung (z. B. **FLAPS 1** oder **FLAPS 2** je nach Abfluggewicht) setzen.
+    *   **FLAPS** auf berechnete Startstellung (z. B. **FLAPS 1** oder **FLAPS 2**) setzen.
     *   **GND SPOILERS** armieren (nach oben ziehen).
     *   **PITCH TRIM** Wheel gemäß MCDU-Wert (THS, z. B. 0.8 UP) einstellen.
     *   **AUTOBRAKE** auf **MAX** setzen.
@@ -142,7 +141,7 @@ Diese Phase umfasst den Reiseflug sowie die Vorbereitung auf die Landung. Ziel i
 
 *   **Reiseflug- & Trim Tank Überwachung:**
     *   Flugweg, Treibstoffverbrauch und FMA-Status (`SPEED`, `ALT CRZ`, `NAV`) regelmäßig überwachen.
-    *   *Trim Tank System (A330 Besonderheit):* Im Steigflug transferiert das automatische A330 Fuel System Treibstoff aus den Wingtanks in den Trim Tank im Leitwerk, um den Schwerpunkt (CG) für optimalen Reiseflug-Widerstand nach hinten zu verlagern. Im Reiseflug erfolgt die automatische Austrimmung.
+    *   *Trim Tank System (A330neo Besonderheit):* Im Steigflug transferiert das automatische A330 Fuel System Treibstoff aus den Wingtanks in den Trim Tank im Leitwerk, um den Schwerpunkt (CG) für optimalen Reiseflug-Widerstand nach hinten zu verlagern. Im Reiseflug erfolgt die automatische Austrimmung.
 *   **Descent Planning & Approach Setup (ca. 80 NM vor Top of Descent):**
     *   Wetter am Zielflughafen (ATIS) abfragen.
     *   **MCDU PERF APPR Page:** QNH, Temperatur, MAG WIND, Decision Altitude (**BARO** / **RADIO**) und Landeklappenstellung (**CONF FULL** oder **CONF 3**) eintragen.
@@ -201,12 +200,12 @@ Nach dem Verlassen der Piste beginnt das Abrollen zur Parkposition. Ziel dieser 
     *   **Ground Crew Safety:** Beim Eindrehen in den Standplatz (Sichtkontakt mit Marshaller / VDGS) das **NOSE** Light (Taxi) auf **OFF** schalten, um den Einweiser nicht zu blenden.
     *   Flugzeug exakt auf der Stop-Markierung anhalten, **PARKING BRAKE** auf **ON** setzen.
     *   Sobald im ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten.
-    *   Über das EFB / GSX Cargo Loaders anfordern (falls GPU genutzt wird: **EXT PWR** auf **ON** schalten).
+    *   Über das flyPad den Jetway anfordern (falls GPU genutzt wird: **EXT PWR** auf **ON** schalten).
     *   **BRK FAN:** ECAM WHEEL-Seite prüfen. Bei Bremstemperaturen über 150°C am Standplatz auf **ON** schalten.
 *   **Engine Shutdown Flow:**
     *   **ENG MASTER 1 & 2:** Nach Verifizierung der 3-minütigen Abkühlzeit auf **OFF** schalten.
     *   Sobald die Triebwerke vollständig zum Stillstand gekommen sind ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten, alle **FUEL PUMPS** auf **OFF** schalten.
-    *   **Main Deck Cargo Door** öffnen und Entladung der ULD Container via EFB/GSX initiieren.
+    *   **SEAT BELTS** auf **OFF** schalten (akustisches Signal zum Abschnallen/Aussteigen) und Passagier-Deboarding via flyPad auslösen.
 
 > **Transit- / Turnaround-Verfahren:**
 > Bei einem unmittelbaren Folgesegment entfällt die nachfolgende Prozedur *Securing the Aircraft*. Der Weiterflug erfolgt direkt gemäß [Transit SOP – Abschnitt 1: Arrival, Parking & Transit Setup](transit-sop.md#1-arrival-parking--transit-setup).
@@ -218,4 +217,3 @@ Nach dem Verlassen der Piste beginnt das Abrollen zur Parkposition. Ziel dieser 
     *   **BRK FAN** auf **OFF** (nach Abkühlung), **APU MASTER SW** auf **OFF**, **BAT 1 & 2** auf **OFF**.
 
 Das Flugzeug befindet sich wieder im vollständigen, stromlosen Cold & Dark Zustand.
-

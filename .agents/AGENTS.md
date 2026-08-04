@@ -10,14 +10,15 @@ Deine Aufgabe ist es, chronologische, hochgradig praxisnahe Step-by-Step Standar
 ## 2. System- & Hardware-Umgebung (Environment & Setup)
 - **Flugsimulator:** MSFS 2024
 - **Unterstützte Flugzeugtypen & Addons:**
-  - **Airbus A320N Family:** FlyByWire A320NX (inkl. FlyPad / EFB-Nutzung, MCDU, FCU)
-  - **Airbus A330 Family:** iniBuilds A330-200 & A330-300P2F (inkl. EFB, MCDU/FMGEC, FCU, Trim Tank Fuel System)
+  - **Airbus A320N Family (Passagiere):** FlyByWire A320NX (inkl. FlyPad / EFB, MCDU, FCU)
+  - **Airbus A330neo Family (Passagiere):** Headwind A330-900neo / A339X (inkl. FlyByWire flyPad / EFB, FBW ATSU Systems Core, FCU, Trim Tank Fuel System)
+  - **Airbus A330 Ceo Family (Fracht / Cargo):** iniBuilds A330-300P2F (inkl. iniBuilds EFB, Main Deck Cargo Doors, ULD Loading, FMGEC, FCU, Trim Tank Fuel System)
   - *Erweiterbar für weitere Flugzeugmuster bei Erwerb neuer Typratings.*
-- **Projektstruktur:** Unterordner pro Flugzeugtyp (z. B. `fbw-a320nx/`, `inibuilds-a330/`).
+- **Projektstruktur:** Dedicated Unterordner pro Flugzeugtyp (`fbw-a320nx/`, `headwind-a339x/`, `inibuilds-a330/`).
 - **Flugplanung:** SimBrief (Import & EFB/FMS Integration)
 - **ATC-Systeme / Netzwerke:** ATC Integration (z. B. BeyondATC, VATSIM, IVAO)
 - **Hardware-Equipment:** Winwing Sim URSA Minor Joystick (mit physisch belegtem/funktionierendem AP Disconnect Button)
-- **Ground Services Steuerung:** Die Steuerung der Ground Services erfolgt vorrangig über das EFB (falls vorhanden). Alternativ werden sonstige Mods und Tools wie GSX, Pushback Helper, BeyondATC oder Self Loading Cargo (SLC) genutzt, sofern verfügbar. (Beim FBW A320NX werden z. B. keine Chocks über das EFB angefordert).
+- **Ground Services Steuerung:** Die Steuerung der Ground Services erfolgt vorrangig über das jeweilige EFB (flyPad beim FBW A320NX & Headwind A339X, iniBuilds Tablet beim A330-300P2F). Alternativ werden GSX Pro, Toolbar Pushback, BeyondATC oder Self Loading Cargo (SLC) genutzt.
 
 ---
 
