@@ -1,14 +1,14 @@
 # iniBuilds Airbus A330-300P2F (Cargo) – Standard Operating Procedures (SOP)
 
-Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **iniBuilds Airbus A330-300P2F** (Freighter) im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup am Cargo Stand bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **iniBuilds EFB (Tablet)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
+This guide describes the Standard Operating Procedures (SOP) for the **iniBuilds Airbus A330-300P2F** (Freighter) in **MSFS 2024**. It leads chronologically through all flight phases from Cold & Dark setup at the cargo stand to final shutdown – aligned with real Airbus FCOM standards, ATC integration (e.g., **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief** flight planning, the **iniBuilds EFB (Tablet)**, and **Winwing Sim URSA Minor** hardware mapping.
 
-> **Transit- / Turnaround-Hinweis:**
-> Bei kurzen Zwischenstopps ohne vollständiges Herunterfahren des Flugzeugs kann direkt die zeitoptimierte [Transit SOP](transit-sop.md) genutzt werden.
+> **Transit / Turnaround Note:**
+> For quick intermediate stops without a complete shutdown, refer directly to the time-optimized [Transit SOP](transit-sop.md).
 
-## Inhaltsverzeichnis
-- [1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Cargo Stand)](#1-pre-flight--cockpit-vorbereitung-cold--dark-am-cargo-stand)
+## Table of Contents
+- [1. Pre-Flight & Cockpit Preparation (Cold & Dark at Cargo Stand)](#1-pre-flight--cockpit-preparation-cold--dark-at-cargo-stand)
 - [2. Engine Start & Pushback](#2-engine-start--pushback)
-- [3. Taxi & Vorbereitung zum Start](#3-taxi--vorbereitung-zum-start)
+- [3. Taxi & Before Takeoff Preparation](#3-taxi--before-takeoff-preparation)
 - [4. Takeoff & Departure](#4-takeoff--departure)
 - [5. Cruise, Fuel Trim Tank & Approach Setup](#5-cruise-fuel-trim-tank--approach-setup)
 - [6. Approach & Landing](#6-approach--landing)
@@ -16,213 +16,212 @@ Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **i
 
 ---
 
-### 1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Cargo Stand)
-Der Flug beginnt im stromlosen Zustand am Cargo Standplatz. Ziel dieser Phase ist die Herstellung der elektrischen Versorgungsbereitschaft, die Abwicklung der Fracht-Bodenabfertigung (Betankung, ULD Cargo Container Load, Main Deck Cargo Door) sowie die vollständige Programmierung und Initialisierung der Navigations- und Flugmanagementsysteme (FMGEC/MCDU).
+### 1. Pre-Flight & Cockpit Preparation (Cold & Dark at Cargo Stand)
+The flight originates in an unpowered state at the cargo stand. The objective of this phase is establishing electrical power, processing cargo ground handling (refueling, ULD cargo container loading, Main Deck Cargo Door), and completing FMGEC/MCDU initialization.
 
-*   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** auf **ON** schalten. Die Batteriespannung auf den Voltmeter-Anzeigen prüfen ($> 25{,}5\text{ V}$). Das iniBuilds EFB (Tablet) hochfahren.
-*   **Initiale Lichter am Boden:** Direkt nach der Bestromung das **NAV & LOGO** Light auf **1** (oder **2**) schalten. Position 1 schaltet das primäre Navigationslicht via AC Essential Bus ein und signalisiert dem Bodenpersonal die Versorgungsbereitschaft.
-*   **Ground Services & GPU (via EFB):** Im EFB unter *Ground Services* die Ground Power Unit (GPU) anfordern. Sobald am Overhead Panel das grüne *AVAIL*-Licht leuchtet, **EXT PWR** drücken (leuchtet blau *ON*).
-    *   Über das EFB / GSX die **Main Deck Cargo Door** öffnen und Cargo Loaders sowie ULD Container beistellen lassen.
-    *   Im EFB unter *Payload/Fuel* SimBrief-Daten laden und den Betankungs- sowie Beladungsprozess für Fracht initiieren.
+*   **Power On:** On the Overhead Panel, switch **BAT 1** and **BAT 2** to **ON**. Check battery voltage on digital voltmeters ($> 25.5\text{ V}$). Power up the iniBuilds EFB (Tablet).
+*   **Initial Ground Lighting:** Immediately after powering on, switch **NAV & LOGO** light to **1** (or **2**). Position 1 powers navigation lights via the AC Essential Bus, signaling electrical readiness to ground personnel.
+*   **Ground Services & GPU (via EFB):** Navigate to *Ground Services* in the EFB and request the Ground Power Unit (GPU). When the green *AVAIL* light illuminates on the overhead panel, press **EXT PWR** (blue *ON* illuminates).
+    *   Open **Main Deck Cargo Door** via EFB / GSX and request cargo loaders and ULD containers.
+    *   Fetch SimBrief data in the EFB under *Payload/Fuel* and initiate cargo refueling and loading.
 *   **Overhead Panel Setup:**
-    *   **CREW SUPPLY** (Sauerstoff) auf **ON** schalten.
-    *   Treibstoffpumpen (**MAIN PUMPS 1 & 2**, **STANDBY PUMPS**, **CENTER PUMP**, **TRIM TANK PUMP**) auf **ON** bzw. **AUTO** prüfen.
-    *   Signale & Notbeleuchtung: **EMER EXIT LT** auf **ARM** setzen. **NO SMOKING** auf **ON** oder **AUTO** setzen. **SEAT BELTS** auf **ON** setzen (schaltet die Anschnallzeichen für den Courier / Supernumerary Crew Bereich ein).
-*   **ATC IFR Clearance:** Streckenfreigabe bei ATC (Delivery/Ground) einholen: *"Request IFR Clearance"*. Nach Erhalt die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen und Squawk am Transponder einstellen.
-*   **ADIRUs Initialisierung:** Auf dem Overhead Panel die drei ADIRS-Wahlschalter (1, 2, 3) von OFF auf **NAV** drehen.
-*   **Detailliertes MCDU / FMGEC Setup:**
-    *   **SimBrief Uplink (AOC):** Taste **MCDU MENU** drücken $\rightarrow$ Line Select Key (LSK) **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ LSK **INIT DATA REQ**.
-    *   **INIT A Page:** Taste **INIT** drücken. LSK neben **INIT REQUEST** betätigen. **FROM/TO**, **FLT NBR**, **COST INDEX** und **CRZ FL** aus SimBrief übernehmen. Alignment auf GPS/ADIRS auf der MCDU verifizieren.
-    *   **F-PLN (Flight Plan):** Taste **F-PLN** drücken. Linken LSK neben Abflughafen wählen $\rightarrow$ LSK **DEPARTURE** $\rightarrow$ Startbahn und SID auswählen $\rightarrow$ LSK **INSERT** drücken. Enroute-Waypoints sowie STAR/Approach am Zielflughafen eingeben.
-    *   **INIT B Page:** Erneut **INIT** drücken und **NEXT PAGE** wählen. LSK neben **ZFW/ZFWCG** und **BLOCK** betätigen, um ZFW, Schwerpunkt (CG) und Block Fuel einzutragen.
-    *   **PERF Page:** Taste **PERF** drücken. Im EFB berechnete Startwerte für **V1**, **VR**, **V2**, **FLEX TO TEMP** sowie Klappen-/Trimmwert (**THS/FLAPS**, z. B. `1/UP0.8`) manuell eintragen.
-*   **Abschluss des Cargo Loadings:** Nach Abschluss des Beladungsprozesses die Main Deck Cargo Door über das EFB schließen.
+    *   Switch **CREW SUPPLY** (Oxygen) to **ON**.
+    *   Verify fuel pumps (**MAIN PUMPS 1 & 2**, **STANDBY PUMPS**, **CENTER PUMP**, **TRIM TANK PUMP**) are **ON** or **AUTO**.
+    *   Passenger signs & emergency lighting: Set **EMER EXIT LT** to **ARM**. Set **NO SMOKING** to **ON** or **AUTO**. Set **SEAT BELTS** to **ON** (illuminates seat belt signs for courier / supernumerary crew area).
+*   **ATC IFR Clearance:** Request clearance from ATC Delivery/Ground: *"Request IFR Clearance"*. Set cleared initial altitude on FCU and tune the transponder squawk code.
+*   **ADIRUs Initialization:** On the Overhead Panel, turn all three ADIRS selectors (1, 2, 3) from OFF to **NAV**.
+*   **Detailed MCDU / FMGEC Setup:**
+    *   **SimBrief Uplink (AOC):** Press **MCDU MENU** key $\rightarrow$ LSK **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ press LSK **INIT DATA REQ**.
+    *   **INIT A Page:** Press **INIT** key. Press LSK next to **INIT REQUEST**. Import **FROM/TO**, **FLT NBR**, **COST INDEX**, and **CRZ FL** from SimBrief. Verify GPS/IRS alignment on MCDU.
+    *   **F-PLN (Flight Plan):** Press **F-PLN** key. Select departure airport LSK $\rightarrow$ LSK **DEPARTURE** $\rightarrow$ select assigned runway and SID $\rightarrow$ press LSK **INSERT**. Enter en-route waypoints and destination STAR/Approach. Clear any discontinuities with **CLR**.
+    *   **INIT B Page:** Press **INIT** key again and select **NEXT PAGE**. Press LSK next to **ZFW/ZFWCG** and **BLOCK** to enter ZFW, Center of Gravity (CG), and Block Fuel.
+    *   **PERF Page:** Press **PERF** key. Enter calculated takeoff speeds (**V1**, **VR**, **V2**), **FLEX TO TEMP**, and flap/trim setting (**THS/FLAPS**, e.g., `1/UP0.8`) from the EFB.
+*   **Finalize Cargo Loading:** Upon completion of cargo loading, close the Main Deck Cargo Door via EFB.
 
 ---
 
 ### 2. Engine Start & Pushback
-Diese Phase umfasst die unmittelbare Startvorbereitung. Ziel ist die Inbetriebnahme der Hilfskraftanlage (APU), die Abkopplung von Bodenstrom und Bodenabfertigung, die Durchführung des Zurückschiebens (Pushback) sowie das sichere Anlassen beider Großfan-Triebwerke.
+This phase covers immediate engine start preparation. The goal is starting the Auxiliary Power Unit (APU), disconnecting ground power, executing pushback, and starting both high-bypass engines.
 
-*   **APU Start (ca. 10 Min vor Pushback):**
-    *   **APU MASTER SW** auf **ON** schalten.
-    *   **APU START** auf **ON** schalten (ON-LED leuchtet).
-    *   Sobald auf dem ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten (Zapfluft- & Klimatisierungsübernahme).
-*   **Bodenstrom trennen (GPU Disconnect):**
-    *   **EXT PWR** am Overhead Panel auf **OFF** schalten (blaue ON-Anzeige erlischt, grüne AVAIL-Anzeige bleibt).
-    *   Über das EFB unter *Ground Services* die Bodenstromversorgung (GPU) abkoppeln lassen.
-*   **ATC Freigabe & Beacon Light:**
-    *   Bei ATC (Ground): *"Request Pushback and Engine Start"* anfordern.
-    *   Nach Erhalt der Freigabe (*"Pushback and Engine Start approved"*) das **BEACON** Light auf **ON** schalten. Das rote Blinklicht signalisiert dem Vorfeldverkehr den Beginn der Anlasssequenz.
+*   **APU Start (approx. 10 min prior to pushback):**
+    *   Switch **APU MASTER SW** to **ON**.
+    *   Switch **APU START** to **ON** (ON LED illuminates).
+    *   Once *APU AVAIL* illuminates on ECAM: Switch **APU BLEED** to **ON** (pneumatic air supply takeover).
+*   **Disconnect Ground Power (GPU Disconnect):**
+    *   Switch **EXT PWR** on Overhead Panel to **OFF** (blue ON extinguishes, green AVAIL remains).
+    *   Disconnect GPU via EFB *Ground Services*.
+*   **ATC Clearance & Beacon Light:**
+    *   Request pushback and engine start clearance from ATC Ground: *"Request Pushback and Engine Start"*.
+    *   Upon clearance (*"Pushback and Engine Start approved"*), switch **BEACON** light to **ON**.
 *   **Before Start Flow & Checklist:**
-    *   **THRUST LEVERS:** Beide Schubhebel in der **IDLE**-Raste verifizieren.
-    *   **PARKING BRAKE:** Bleibt vorerst auf **ON** gesetzt.
-    *   Before Start Checklist abarbeiten.
-*   **Pushback-Initiierung & Schlepper-Kopplung:**
-    *   Pushback-Vorgang über das EFB, den MSFS-Groundservice oder BeyondATC/GSX auslösen.
-    *   Das Ankoppeln des Schleppers abwarten.
-    *   Sobald die Bodencrew / der Schlepper meldet: *"Pushback tractor connected, release parking brake"*:
-        *   **PARKING BRAKE** auf **OFF** schalten.
-*   **Triebwerksanlass-Prozedur (Engine Start Flow):**
-    *   Den **ENG MODE SELECTOR** (Mittelkonsole) von NORM auf **IGN/START** drehen (ECAM schaltet automatisch auf die ENG-Seite um und zeigt Zapfluftdruck an).
-    *   **Start Triebwerk 2 (Rechtes Großfan-Triebwerk zuerst):**
-        *   **ENG MASTER 2** auf **ON** schieben.
-        *   *ECAM-Überwachung:* $N_2$-Anstieg beobachten. Bei $N_2 \ge 16\%$ erfolgt die Zündung (IGN-Anzeige). Treibstofffluss (Fuel Flow) und Abgastemperatur (EGT) steigen an, gefolgt vom $N_1$-Anstieg. Bei ca. $50\% N_2$ klinkt der Starter aus. Bei ca. $58–60\% N_2$ erscheint im ECAM grün *AVAIL* $\rightarrow$ Triebwerk 2 läuft stabil.
-    *   **Start Triebwerk 1 (Linkes Triebwerk):**
-        *   Sobald Triebwerk 2 *AVAIL* zeigt: **ENG MASTER 1** auf **ON** schieben.
-        *   Identische ECAM-Überwachung ($N_2 \rightarrow$ Zündung $\rightarrow$ FF/EGT $\rightarrow N_1 \rightarrow$ *AVAIL*) durchführen.
-*   **After Start Flow (Nach Ende von Pushback & Engine Start):**
-    *   Sobald die Maschine auf der Rollgasse zum Stehen kommt und der Pushback beendet ist:
-        *   **PARKING BRAKE** auf **ON** setzen (Rückmeldung an Bodencrew: *"Parking brake set"*).
-    *   **ENG MODE SELECTOR:** Den **ENG MODE SELECTOR** zurück auf **NORM** drehen, sobald beide Triebwerke stabil laufen (grünes *AVAIL* im ECAM).
-    *   **APU BLEED** auf **OFF** schalten.
-    *   **APU MASTER SW** auf **OFF** schalten (APU kühlt herunter und schaltet ab).
-    *   Entkoppeln des Schleppers bestätigen lassen und auf das finale Signal der Bodencrew (Bypass-Pin gezeigt) achten.
+    *   **THRUST LEVERS:** Verify both thrust levers are in **IDLE** detent.
+    *   **PARKING BRAKE:** Remains **ON**.
+    *   Execute Before Start Checklist.
+*   **Pushback Initiation & Tug Connection:**
+    *   Initiate pushback via EFB, MSFS Ground Services, BeyondATC, or GSX.
+    *   Wait for tug connection.
+    *   When ground crew/tug driver reports: *"Pushback tractor connected, release parking brake"*:
+        *   Switch **PARKING BRAKE** to **OFF**.
+*   **Engine Start Procedure (Engine Start Flow):**
+    *   Turn **ENG MODE SELECTOR** (center pedestal) from NORM to **IGN/START** (ECAM switches automatically to ENG page, check bleed pressure ~30 psi).
+    *   **Start Engine 2 (Right High-Bypass Engine First):**
+        *   Move **ENG MASTER 2** to **ON**.
+        *   *ECAM Monitoring:* Observe $N_2$ rise. At $N_2 \ge 16\%$, IGN indication appears, Fuel Flow (FF) and EGT rise, followed by $N_1$ increase. At approx. $50\% N_2$, starter disengages. At approx. $58–60\% N_2$, green *AVAIL* appears on ECAM $\rightarrow$ Engine 2 is stable.
+    *   **Start Engine 1 (Left Engine):**
+        *   Once Engine 2 displays *AVAIL*, move **ENG MASTER 1** to **ON**.
+        *   Perform identical ECAM monitoring ($N_2 \rightarrow$ IGN $\rightarrow$ FF/EGT $\rightarrow N_1 \rightarrow$ *AVAIL*).
+*   **After Start Flow (Post Pushback & Start):**
+    *   Once the aircraft comes to a stop on taxiway and pushback is finished:
+        *   Set **PARKING BRAKE** to **ON** (confirm to ground crew: *"Parking brake set"*).
+    *   **ENG MODE SELECTOR:** Turn **ENG MODE SELECTOR** back to **NORM** once both engines display green *AVAIL*.
+    *   Switch **APU BLEED** to **OFF**.
+    *   Switch **APU MASTER SW** to **OFF** (APU cools down and shuts off).
+    *   Confirm tug disconnect and acknowledge ground crew bypass pin signal.
 
 ---
 
-### 3. Taxi & Vorbereitung zum Start
-Diese Phase beinhaltet das Einrollen zur aktiven Startbahn. Ziel ist das sichere Manövrieren am Boden, das Konfigurieren aller flight-relevanten Systeme (Klappen, Trimming, Spoilers, WXR/TCAS) sowie die finale technische Startüberprüfung (T/O Config & Flight Controls Check).
+### 3. Taxi & Before Takeoff Preparation
+This phase includes taxiing to the active runway, configuring flight systems (flaps, trim, spoilers, WXR/TCAS), and performing final technical takeoff checks (T/O Config & Flight Controls Check).
 
-*   **ATC Freigabe & Rollbeleuchtung:** Bei ATC: *"Request Taxi"*. Nach Erhalt der Rollfreigabe im *After Start / Taxi Flow* das **NOSE** Light auf **TAXI** schalten. Beim Rollen auf oder über Landebahnen und Taxiways zusätzlich die **RWY TURN OFF** Lights auf **ON** schalten.
+*   **ATC Clearance & Taxi Lighting:** Request taxi clearance from ATC: *"Request Taxi"*. Upon clearance, switch **NOSE** light to **TAXI**. Switch **RWY TURN OFF** lights to **ON** when maneuvering on taxiways or crossing runways.
 *   **After Start Flow / T/O Config:**
-    *   **FLAPS** auf berechnete Startstellung (z. B. **FLAPS 1** oder **FLAPS 2** je nach Abfluggewicht) setzen.
-    *   **GND SPOILERS** armieren (nach oben ziehen).
-    *   **PITCH TRIM** Wheel gemäß MCDU-Wert (THS, z. B. 0.8 UP) einstellen.
-    *   **RUD TRIM:** Verifizieren, dass die Rudertrimmung auf `0.0°` steht (**RESET** betätigen falls erforderlich).
-    *   **AUTOBRAKE** auf **MAX** setzen.
-*   **Wetterradar & Anti-Ice Setup:**
-    *   **WXR RADAR PANEL:** **SYS** auf **1** (oder **2**), **PWS** auf **AUTO**, **MODE** auf **WX** oder **WX+T** stellen.
-    *   **ENG / WING ANTI ICE:** Bei OAT $\le 10^\circ\text{C}$ und sichtbarer Feuchtigkeit entsprechend zuschalten.
+    *   Set **FLAPS** to calculated takeoff position (e.g., **FLAPS 1** or **FLAPS 2** depending on takeoff weight).
+    *   Arm **GND SPOILERS** (pull lever UP).
+    *   Set **PITCH TRIM** wheel according to MCDU THS calculation (e.g., 0.8 UP).
+    *   **RUD TRIM:** Verify rudder trim reads `0.0°` (press **RESET** if required).
+    *   Set **AUTOBRAKE** to **MAX**.
+*   **Weather Radar & Anti-Ice Setup:**
+    *   **WXR RADAR PANEL:** Set **SYS** to **1** (or **2**), **PWS** to **AUTO**, **MODE** to **WX** or **WX+T**.
+    *   **ENG / WING ANTI ICE:** Switch ON as required if OAT $\le 10^\circ\text{C}$ in visible moisture.
 *   **Transponder & TCAS Setup:**
-    *   **ATC / XPDR MODE:** Auf **AUTO** (oder **ON**) stellen.
-    *   **ALT RPTG:** Auf **ON** stellen.
-    *   **TCAS MODE:** Auf **TA/RA** stellen.
-*   **Flight Controls Check:** ECAM F/CTL Page überwachen: Stick Full Up, Down, Left, Right; Rudder Pedals Left, Right.
-*   **Flight Instruments & T/O CONFIG Test:** Den blauen **T/O CONFIG** Button auf der Mittelkonsole **einmalig** drücken. Dies testet die technische Startkonfiguration. Grünes *NORMAL* auf ECAM verifizieren.
-*   **Brake Fan Check:** ECAM WHEEL-Seite prüfen. Verifizieren, dass die Bremstemperaturen unter 150°C liegen und **BRK FAN** auf **OFF** steht.
+    *   Set **ATC / XPDR MODE** to **AUTO** (or **ON**).
+    *   Set **ALT RPTG** to **ON**.
+    *   Set **TCAS MODE** to **TA/RA**.
+*   **Flight Controls Check:** Monitor ECAM F/CTL page: Stick Full Up, Down, Left, Right; Rudder Pedals Left, Right.
+*   **Flight Instruments & T/O CONFIG Test:** Press blue **T/O CONFIG** button on center pedestal **once**. Verify green *NORMAL* on ECAM.
+*   **Brake Fan Check:** Check ECAM WHEEL page. Verify brake temperatures are below 150°C and **BRK FAN** is **OFF**.
 
 ---
 
 ### 4. Takeoff & Departure
-Ankunft am Holding Point und Durchführung des Startlaufs. Ziel dieser Phase ist das Einholen der Startfreigabe, das Herstellen der Startkonfiguration und Triebwerksleistung, der sichere Abhebevorgang sowie der Erststeigflug und die Übergangsanpassung im Steigprofil (Thrust Reduction & Clean-Up).
+Arrival at holding point and takeoff roll execution. The goal is obtaining takeoff clearance, setting takeoff power, executing a smooth rotation, initial climb, and transition into climb profile (Thrust Reduction & Clean-Up).
 
-*   **ATC Freigabe:** Bei ATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
-*   **Lichter & System-Check für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
-    *   **STROBE** von AUTO auf **ON** schalten.
-    *   **LANDING L & R** Schalter (beide Schalter der Fixed Wing-Root Lichter) auf **ON** schalten.
-    *   **NOSE** Light von TAXI auf **T.O.** (Takeoff) schalten.
-    *   **CALLS PANEL (Overhead):** Den **ALL**-Knopf drücken (oder **SEAT BELTS** Signs triggern), um der Kabinenbesatzung den Startlauf zu signalisieren (*"Cabin Crew, take your seats for takeoff"*).
-    *   **TCAS & PWS Check:** Verifizieren, dass **TCAS** auf **TA/RA** und **PWS** auf **AUTO** steht.
-    *   **ECAM T/O MEMO Sichtprüfung:** Sobald die Kabine bereit ist, wechselt `CABIN READY` im ECAM auf **grün**. Visuell verifizieren, dass alle Zeilen im ECAM T/O MEMO grün sind.
+*   **ATC Clearance:** Report to ATC: *"Ready for Departure"*. Await *"Line up and wait"* or *"Cleared for Takeoff"*.
+*   **Line-up System & Lighting Check:** When entering the runway:
+    *   Switch **STROBE** from AUTO to **ON**.
+    *   Switch **LANDING L & R** switches (both fixed wing-root light switches) to **ON**.
+    *   Switch **NOSE** light from TAXI to **T.O.** (Takeoff).
+    *   **CALLS PANEL (Overhead):** Press **ALL** button (or trigger **SEAT BELTS** signs) to signal takeoff (*"Cabin Crew, take your seats for takeoff"*).
+    *   **TCAS & PWS Check:** Verify **TCAS** is **TA/RA** and **PWS** is **AUTO**.
+    *   **ECAM T/O MEMO Visual Check:** Once ready, `CABIN READY` switches to green on ECAM. Visually verify all ECAM T/O MEMO lines are green.
 *   **Takeoff Roll & Power Set:**
-    *   Bremse lösen, Schubhebel symmetrisch auf ca. 50% $N_1$ schieben und Stabilisierung abwarten.
-    *   Schubhebel in die **FLEX/MCT**- (oder **TOGA**-) Raste schieben.
-    *   **FMA-Check:** **"MAN FLEX"** (oder MAN TOGA), **"SRS"**, **"RWY"**, **"A/THR BLUE"** verifizieren.
-    *   Bei VR: Rotieren (ca. 3° pro Sekunde auf Pitch ca. 15°).
-*   **Nach dem Abheben & Departure Handoff:**
-    *   Bei positiver Steigrate: *"Positive Climb"* $\rightarrow$ **LANDING GEAR** Lever auf **UP** schalten.
-    *   **ATC Handoff:** Frequenzwechsel zu Departure/Radar durchführen.
-    *   **Aktivierung des Autopiloten & FCU Logik im Steigflug:** Ab 100 ft AGL kann **AP1** durch Drücken des **AP1**-Buttons an der FCU aktiviert werden.
-        *   **Managed Climb (Push / CLB):** **ALT**-Knopf an der FCU drücken ("Push"). Punkt erscheint im FCU-Display, FMA zeigt **CLB**.
-        *   **Open Climb (Pull / OP CLB):** **ALT**-Knopf ziehen ("Pull"). Punkt erlischt, FMA zeigt **OP CLB**.
-    *   Bei Thrust Reduction Altitude (LVR CLB blinkt auf FMA): **THRUST LEVERS** manuell in die **CL**-Raste zurückziehen.
-    *   **Acceleration Altitude & Clean Up:** Klappen stufenweise gemäß F/S-Speed einfahren (**FLAPS 0**). **GND SPOILERS** entwaffnen.
+    *   Release brakes, advance **THRUST LEVERS** symmetrically to approx. 50% N1 and await stabilization.
+    *   Advance thrust levers into **FLEX/MCT** (or **TOGA**) detent.
+    *   **FMA Check:** Verify **"MAN FLEX"** (or MAN TOGA), **"SRS"**, **"RWY"**, **"A/THR BLUE"**.
+    *   At VR: Rotate smoothly (approx. 3°/sec pitch rate toward 15° pitch attitude).
+*   **Post Takeoff & Departure Handoff:**
+    *   At positive rate of climb: *"Positive Climb"* $\rightarrow$ **LANDING GEAR** lever **UP**.
+    *   **ATC Handoff:** Perform frequency change to Departure/Radar upon instruction.
+    *   **Autopilot Activation & Climb Logic:** Above 100 ft AGL, **AP1** can be engaged by pressing **AP1** button on FCU.
+        *   **Managed Climb (Push / CLB):** Press **ALT** knob on FCU ("Push"). Dot appears in FCU display, FMA displays **CLB**.
+        *   **Open Climb (Pull / OP CLB):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP CLB**.
+    *   At Thrust Reduction Altitude (**LVR CLB** flashes on FMA): Retract **THRUST LEVERS** manually into **CL** detent.
+    *   **Acceleration Altitude & Clean Up:** Retract flaps incrementally according to F/S speeds (**FLAPS 0**). Disarm **GND SPOILERS**.
 *   **Transition Altitude (Baro Reference Switch):**
-    *   Beim Passieren der Transition Altitude den **BARO**-Knopf ziehen (**BARO KNOB PULL**), um auf **STD** (Standard 1013.25 hPa / 29.92 inHg) umzuschalten.
-*   **10.000 ft AAL (Climb):**
-    *   **LANDING L & R** Schalter auf **OFF**. **NOSE** Light auf **OFF**. **RWY TURN OFF** Lights auf **OFF**.
-    *   **SEAT BELTS** auf **OFF** schalten (sofern wetterbedingt möglich).
+    *   When passing Transition Altitude, pull **BARO** knob (**BARO KNOB PULL**) to switch to **STD** (Standard 1013.25 hPa / 29.92 inHg).
+*   **10,000 ft AAL (Climb):**
+    *   Switch **LANDING L & R** switches to **OFF**. Switch **NOSE** light to **OFF**. Switch **RWY TURN OFF** lights to **OFF**.
+    *   Switch **SEAT BELTS** to **OFF** (weather permitting).
 
 ---
 
 ### 5. Cruise, Fuel Trim Tank & Approach Setup
-Diese Phase umfasst den Reiseflug sowie die Vorbereitung auf die Landung. Ziel ist die kontinuierliche System- und Treibstoffüberwachung (inkl. automatischem A330 Trim Tank Transfer zur CG-Optimierung), das Einholen der aktuellen Anflugwetterdaten sowie die vollständige MCDU/FCU-Programmierung für den Sink- und Endanflug.
+This phase covers cruise monitoring and descent/landing preparation. The goal is continuous system/fuel monitoring (including automatic A330 Trim Tank transfer for CG optimization), acquiring destination weather, and completing MCDU/FCU programming for descent and approach.
 
 > **Airmanship & Workload Management:**
-> Die Reiseflugphase dient der frühzeitigen Anflugvorbereitung und dem Briefing (*Aviate, Navigate, Communicate*). Das Energiemanagement hat stets Priorität. Eine Plausibilitätsprüfung des Sinkflugs (3 NM Distanz pro 1.000 ft Höhenverlust) ist durchzuführen.
+> Cruise phase serves early approach preparation and briefing (*Aviate, Navigate, Communicate*). Energy management is top priority. Perform descent plausibility check (3 NM distance per 1,000 ft altitude loss).
 
-*   **Reiseflug- & Trim Tank Überwachung:**
-    *   Flugweg, Treibstoffverbrauch und FMA-Status (`SPEED`, `ALT CRZ`, `NAV`) regelmäßig überwachen.
-    *   *Trim Tank System (A330 Besonderheit):* Im Steigflug transferiert das automatische A330 Fuel System Treibstoff aus den Wingtanks in den Trim Tank im Leitwerk, um den Schwerpunkt (CG) für optimalen Reiseflug-Widerstand nach hinten zu verlagern. Im Reiseflug erfolgt die automatische Austrimmung.
-*   **Descent Planning & Approach Setup (ca. 80 NM vor Top of Descent):**
-    *   Wetter am Zielflughafen (ATIS) abfragen.
-    *   **MCDU PERF APPR Page:** QNH, Temperatur, MAG WIND, Decision Altitude (**BARO** / **RADIO**) und Landeklappenstellung (**CONF FULL** oder **CONF 3**) eintragen.
-    *   **F-PLN:** STAR und Approach im Flugplan prüfen und aktivieren.
-*   **Sinkflug-Vorbereitung & FCU Bedienung (DES vs. OP DES):**
-    *   Ca. 5–10 NM vor TOD die freigegebene untere Flughöhe an der **FCU** eindrehen.
-    *   **Managed Descent (Push / DES):** Am TOD den **ALT**-Knopf drücken ("Push"). Punkt erscheint im FCU-Display, FMA zeigt **DES**.
-    *   **Open Descent (Pull / OP DES):** **ALT**-Knopf ziehen ("Pull"). Punkt erlischt, FMA zeigt **OP DES**.
-*   **Passieren von FL100 / 10.000 ft AAL (Descent):**
-    *   **LANDING L & R** Schalter auf **ON** schalten.
-    *   **SEAT BELTS** auf **ON** schalten.
-    *   **EFIS Panel:** **LS**-Button vorbereiten, barometrische Referenz (**BARO**) auf Ziel-QNH umstellen (spätestens bei Transition Level).
-    *   **MCDU RAD NAV:** ILS-Frequenz und Inbound-Kurs auf Plausibilität verifizieren.
-    *   *(Hinweis: Ein Passagier-Cabin-Call entfällt beim Cargo-Frachter).*
+*   **Cruise & Trim Tank Monitoring:**
+    *   Regularly monitor flight path, fuel burn, and FMA status (`SPEED`, `ALT CRZ`, `NAV`).
+    *   *Trim Tank System (A330 Specifics):* During climb, the automatic A330 fuel system transfers fuel from wing tanks to the tail trim tank to shift Center of Gravity (CG) aft for minimum cruise drag. Automatic forward transfer occurs prior to descent/landing.
+*   **Descent Planning & Approach Setup (approx. 80 NM prior to TOD):**
+    *   Obtain destination weather (ATIS).
+    *   **MCDU PERF APPR Page:** Enter QNH, Temperature, MAG WIND, Decision Altitude (**BARO** / **RADIO** minimums), and flap configuration (**CONF FULL** or **CONF 3**).
+    *   **F-PLN:** Verify and activate destination STAR and Approach.
+*   **Descent Initiation & FCU Operation (DES vs. OP DES):**
+    *   Dial cleared lower ATC altitude on **FCU** approx. 5–10 NM prior to TOD.
+    *   **Managed Descent (Push / DES):** At TOD, press **ALT** knob ("Push"). Dot appears in FCU display, FMA displays **DES**.
+    *   **Open Descent (Pull / OP DES):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP DES**.
+*   **Passing FL100 / 10,000 ft AAL (Descent):**
+    *   Switch **LANDING L & R** switches to **ON**.
+    *   Switch **SEAT BELTS** to **ON**.
+    *   **EFIS Panel:** Prepare **LS** button, pre-select barometric reference (**BARO**) to destination QNH (set at Transition Level).
+    *   **MCDU RAD NAV:** Verify tuned ILS frequency and inbound course.
+    *   *(Note: Passenger cabin call is omitted on cargo freighters).*
 
 ---
 
 ### 6. Approach & Landing
-Diese Phase beschreibt den Sink- und Endanflug bis zum Aufsetzen. Ziel ist das Herstellen der Landekonfiguration, das Erfassen des Anflugpfades (z. B. ILS Localizer & Glideslope), der zeitgerechte Übergang in den manuellen Flug sowie die sichere Landung und Abbremsung auf der Piste.
+This phase covers initial approach through touchdown. The goal is establishing landing configuration, capturing guidance signals (ILS Localizer & Glideslope), timely manual takeover, touchdown, and deceleration.
 
 > **Airmanship & Deceleration Tips:**
-> Zur Vermeidung von "High and Fast"-Szenarien können bei ATC-Abkürzungen frühzeitig die **SPEED BRAKES** (bis zur Hälfte) in Kombination mit **OP DES** oder das Ausfahren des Fahrwerks (**GEAR DOWN**) als Luftwiderstand genutzt werden.
+> To prevent "High and Fast" scenarios during ATC shortcuts, use **SPEED BRAKES** (up to half) in combination with **OP DES** or extend landing gear (**GEAR DOWN**) early for additional drag.
 
-*   **Initial Approach & LS-Aktivierung:**
-    *   **LS Button (EFIS Panel):** Beim Einrollen in den Anflugsektor die **LS**-Taste drücken, um ILS-Skalen (Localizer & Glideslope Rauten) im PFD einzublenden.
-    *   Bei Green Dot Speed: **FLAPS 1** setzen.
-*   **Approach Clearance & APPR-Aktivierung (FCU):**
-    *   Nach Erhalt der Freigabe von ATC (*"Cleared ILS Approach Runway..."*) und auf Intercept-Kurs:
-        *   **APPR Button:** Taste an der FCU drücken (FMA zeigt `LOC` blau und `G/S` blau).
-        *   **AP2 Button:** Zusätzlich **AP2**-Taste an der FCU drücken, um Dual-Channel Autoland / CAT III vorzubereiten (FMA zeigt `AP 1+2`).
-*   **Established-Meldung (ATC Communication):**
-    *   Sobald der Localizer abgefangen ist (FMA zeigt `LOC` grün): Bei ATC melden: *"Established ILS Runway [Pistenbezeichnung]"*.
+*   **Initial Approach & LS Activation:**
+    *   **LS Button (EFIS Panel):** When entering approach sector, press **LS** button to display ILS scales on PFD.
+    *   At Green Dot Speed: Select **FLAPS 1**.
+*   **Approach Clearance & APPR Activation (FCU):**
+    *   Upon receiving approach clearance (*"Cleared ILS Approach Runway..."*) and on intercept heading:
+        *   **APPR Button:** Press **APPR** button on FCU (FMA displays `LOC` blue and `G/S` blue).
+        *   **AP2 Button:** Press **AP2** button on FCU for Dual-Channel Autoland / CAT III preparation (FMA displays `AP 1+2`).
+*   **Established Report (ATC Communication):**
+    *   Once Localizer is captured (FMA displays `LOC` green): Report to ATC: *"Established ILS Runway [Runway Identifier]"*.
 *   **Final Approach Sequence & Flaps Timeline:**
-    *   Bei S-Speed: **FLAPS 2** setzen.
-    *   Ca. 2.000 ft AAL (oder 1/2 Dot unter Glideslope): **GEAR DOWN** ausfahren, **GND SPOILERS** armieren, **NOSE** Light auf T.O. und **RWY TURN OFF** Lights auf ON schalten.
-    *   Unterhalb VFE für Flaps 3: **FLAPS 3** setzen, gefolgt von **FLAPS FULL** bei F-Speed.
-    *   **AUTOBRAKE:** Auf **MED** oder **LOW** setzen. Landing Checklist abarbeiten.
-*   **Deaktivierung des Autopiloten (Manual Landing):**
-    *   Sobald die Startbahn in Sicht ist und das Flugzeug stabilisiert liegt (zwischen 1.000 ft und 500 ft AGL), Steuerung manuell übernehmen.
-    *   **Autopilot Disconnect:** Abschalten über den **AUTOPILOT OFF** Button am Joystick mittels Doppelklick (erster Klick trennt AP, zweiter Klick quittiert akustische Warnung).
-*   **Touchdown & Reverser:** Bei Ansage *"Retard"* **THRUST LEVERS** auf **IDLE** ziehen. Nach Aufsetzen **REVERSERS** auf **REV MAX** oder **REV IDLE**. Bei 70 kt Reverser auf Idle zurücknehmen und vor Abrollen schließen. Landebahn verlassen.
+    *   At S-Speed: Select **FLAPS 2**.
+    *   At approx. 2,000 ft AAL (or 1/2 dot below Glideslope): Select **GEAR DOWN**, arm **GND SPOILERS**, switch **NOSE** light to **T.O.**, switch **RWY TURN OFF** lights to **ON**.
+    *   Below VFE for Flaps 3: Select **FLAPS 3**, followed by **FLAPS FULL** at F-speed.
+    *   **AUTOBRAKE:** Select **MED** or **LOW**. Execute Landing Checklist.
+*   **Autopilot Disconnect (Manual Landing):**
+    *   Once runway is in sight and aircraft is stabilized (between 1,000 ft and 500 ft AGL), take manual control.
+    *   **Autopilot Disconnect:** Disconnect via joystick **AUTOPILOT OFF** button using a **double click** (first click disconnects AP, second click silences audio warning).
+*   **Touchdown & Reversers:** At *"Retard"* callout, retard **THRUST LEVERS** to **IDLE**. Upon touchdown, apply **REVERSERS** to **REV MAX** or **REV IDLE**. At 70 knots, reduce to **REV IDLE** and close before vacating runway. Leave runway.
 
 ---
 
 ### 7. After Landing, Taxi & Shutdown
-Nach dem Verlassen der Piste beginnt das Abrollen zur Parkposition. Ziel dieser Phase ist das Zurücksetzen der Start- und Anflugsysteme im Taxi-In, das geordnete Abstellen der Triebwerke am Gate/Standplatz sowie die schlussendliche Übergabe in den Cold & Dark Zustand.
+Safe runway exit, taxiing to stand, engine shutdown, and securing the aircraft.
 
 > **Airmanship & Taxi-In Management:**
-> * **Runway Vacated:** Nach dem Überrollen der gelben Holding-Linie nicht anhalten. Das Flugzeug rollt flüssig weiter, während die Systeme umgestellt werden und der Funkspruch an Ground erfolgt.
-> * **Triebwerks-Abkühlzeit:** Die 3-minütige Abkühlphase bei Idle-Schub schützt die Turbinenwellen vor thermischem Schock. Die Rollzeit vom Verlassen der Piste bis zum Gate wird dabei vollständig als Abkühlzeit angerechnet.
+> * **Runway Vacated:** Do not stop upon crossing the yellow holding line. Keep rolling smoothly while reconfiguring systems and contacting Ground.
+> * **Engine Cool-Down Period:** A 3-minute engine idle period protects turbine shafts from thermal shock. Taxi time from runway exit to stand counts toward this 3-minute requirement.
 
 *   **Runway Vacated:**
-    *   Sobald Holding-Linie überrollt ist: **STROBE** auf **AUTO** (oder **OFF**), **LANDING L & R** Schalter auf **OFF**, **NOSE** Light auf **TAXI**. **RWY TURN OFF** Lights auf **OFF**.
-    *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten.
-    *   **TCAS & XPDR:** **TCAS MODE** auf **STBY** (oder `TA ONLY`), **ATC/XPDR MODE** auf **AUTO** / **STBY**.
-    *   **FLAPS:** Klappen auf **0** einfahren. **GND SPOILERS:** Spoilers disarmieren.
-    *   **ENG ANTI ICE:** Falls zuvor aktiviert, ausschalten.
+    *   Once holding line is crossed: Switch **STROBE** to **AUTO** (or **OFF**), switch **LANDING L & R** switches to **OFF**, switch **NOSE** light to **TAXI**. Switch **RWY TURN OFF** lights to **OFF**.
+    *   **WXR RADAR PANEL:** Switch **SYS** and **PWS** to **OFF**.
+    *   **TCAS & XPDR:** Set **TCAS MODE** to **STBY** (or `TA ONLY`), set **ATC/XPDR MODE** to **AUTO** / **STBY**.
+    *   **FLAPS:** Retract flaps to **0**. **GND SPOILERS:** Disarm spoilers.
+    *   **ENG ANTI ICE:** Switch off if previously active.
 *   **Taxi to Gate & APU Management:**
-    *   Rollfreigabe zum Gate bei ATC anfordern (*"Request taxi to gate"*).
-    *   Ca. 3 Minuten vor Erreichen der Parkposition **APU MASTER SW** auf **ON** und **APU START** auf **ON** schalten.
+    *   Request taxi to gate/stand from ATC Ground (*"Request taxi to gate"*).
+    *   Approx. 3 minutes prior to reaching stand: Switch **APU MASTER SW** to **ON** and **APU START** to **ON**.
 *   **Parking Position & Shutdown:**
-    *   **Ground Crew Safety:** Beim Eindrehen in den Standplatz (Sichtkontakt mit Marshaller / VDGS) das **NOSE** Light (Taxi) auf **OFF** schalten, um den Einweiser nicht zu blenden.
-    *   Flugzeug exakt auf der Stop-Markierung anhalten, **PARKING BRAKE** auf **ON** setzen.
-    *   Sobald im ECAM *APU AVAIL* leuchtet: **APU BLEED** auf **ON** schalten.
-    *   Über das EFB / GSX Cargo Loaders anfordern (falls GPU genutzt wird: **EXT PWR** auf **ON** schalten).
-    *   **BRK FAN:** ECAM WHEEL-Seite prüfen. Bei Bremstemperaturen über 150°C am Standplatz auf **ON** schalten.
+    *   **Ground Crew Safety:** When turning into stand (visual contact with marshaller / VDGS), switch **NOSE** light (Taxi) to **OFF** to avoid blinding ground personnel.
+    *   Stop aircraft precisely on stop mark, set **PARKING BRAKE** to **ON**.
+    *   Once ECAM displays *APU AVAIL*: Switch **APU BLEED** to **ON**.
+    *   Request cargo loaders via EFB / GSX (if using GPU: switch **EXT PWR** to **ON**).
+    *   **BRK FAN:** Check ECAM WHEEL page. Switch **BRK FAN** to **ON** if brake temperatures exceed 150°C.
 *   **Engine Shutdown Flow:**
-    *   **ENG MASTER 1 & 2:** Nach Verifizierung der 3-minütigen Abkühlzeit auf **OFF** schalten.
-    *   Sobald die Triebwerke vollständig zum Stillstand gekommen sind ($N_1 < 5\%$): **BEACON** Light auf **OFF** schalten, alle **FUEL PUMPS** auf **OFF** schalten.
-    *   **Main Deck Cargo Door** öffnen und Entladung der ULD Container via EFB/GSX initiieren.
+    *   **ENG MASTER 1 & 2:** Move to **OFF** after verifying 3-minute idle cool-down.
+    *   Once engines come to a complete stop ($N_1 < 5\%$): Switch **BEACON** light to **OFF**, switch all **FUEL PUMPS** to **OFF**.
+    *   Open **Main Deck Cargo Door** and initiate ULD container offloading via EFB/GSX.
 
-> **Transit- / Turnaround-Verfahren:**
-> Bei einem unmittelbaren Folgesegment entfällt die nachfolgende Prozedur *Securing the Aircraft*. Der Weiterflug erfolgt direkt gemäß [Transit SOP – Abschnitt 1: Arrival, Parking & Transit Setup](transit-sop.md#1-arrival-parking--transit-setup).
+> **Transit / Turnaround Procedure:**
+> For an immediate follow-on flight leg, skip *Securing the Aircraft* below and proceed directly to [Transit SOP – Section 1: Arrival, Parking & Transit Setup](transit-sop.md#1-arrival-parking--transit-setup).
 
 *   **Securing Aircraft (Cold & Dark):**
-    *   **NO SMOKING** auf **OFF**, **EMER EXIT LT** auf **OFF**.
-    *   **APU BLEED** auf **OFF**, **CREW SUPPLY** (Sauerstoff) auf **OFF**.
-    *   ADIRS 1, 2, 3 nacheinander auf **OFF**, **NAV & LOGO** Light auf **OFF**.
-    *   **BRK FAN** auf **OFF** (nach Abkühlung), **APU MASTER SW** auf **OFF**, **BAT 1 & 2** auf **OFF**.
+    *   Switch **NO SMOKING** to **OFF**, **EMER EXIT LT** to **OFF**.
+    *   Switch **APU BLEED** to **OFF**, **CREW SUPPLY** (Oxygen) to **OFF**.
+    *   Turn ADIRS 1, 2, 3 sequentially to **OFF**, switch **NAV & LOGO** light to **OFF**.
+    *   Switch **BRK FAN** to **OFF** (after cooling), **APU MASTER SW** to **OFF**, switch **BAT 1 & 2** to **OFF**.
 
-Das Flugzeug befindet sich wieder im vollständigen, stromlosen Cold & Dark Zustand.
-
+The aircraft is now in a completely unpowered Cold & Dark state.

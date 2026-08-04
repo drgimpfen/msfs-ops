@@ -1,11 +1,11 @@
 # Headwind Airbus A330-900neo (A339X) – Transit SOP (Turnaround)
 
-Dieses Dokument beschreibt das zeitoptimierte Transit- und Turnaround-Verfahren für den **Headwind Airbus A330-900neo (A339X)** (Passagier) im **MSFS 2024**. Es kommt zum Einsatz, wenn das Flugzeug nach einem Flugabschnitt am Gate verbleibt, nicht vollständig stromlos geschaltet wird und effizient für den nächsten Flugabschnitt (Leg) vorbereitet wird.
+This document describes the time-optimized transit and turnaround procedure for the **Headwind Airbus A330-900neo (A339X)** (Passenger) in **MSFS 2024**. It applies when the aircraft remains parked at the gate between legs without powering down, preparing efficiently for the subsequent segment.
 
-> **Voraussetzung:**
-> Das Flugzeug wurde gemäß [SOP – Abschnitt 7: After Landing, Taxi & Shutdown](sop.md#7-after-landing-taxi--shutdown) am Gate abgestellt, die Triebwerke sind abgeschaltet, aber die APU (oder externe Stromversorgung GPU) sichert die elektrische und pneumatische Versorgung.
+> **Prerequisite:**
+> The aircraft has been parked at the gate per [SOP – Section 7: After Landing, Taxi & Shutdown](sop.md#7-after-landing-taxi--shutdown), engines are shut down, and electrical/pneumatic power is maintained via APU (or external GPU).
 
-## Inhaltsverzeichnis
+## Table of Contents
 - [1. Arrival, Parking & Transit Setup](#1-arrival-parking--transit-setup)
 - [2. FMGEC / MCDU Reset & Re-Initialization](#2-fmgec--mcdu-reset--re-initialization)
 - [3. Pre-Departure Flow & Fast Cockpit Prep](#3-pre-departure-flow--fast-cockpit-prep)
@@ -13,33 +13,33 @@ Dieses Dokument beschreibt das zeitoptimierte Transit- und Turnaround-Verfahren 
 ---
 
 ### 1. Arrival, Parking & Transit Setup
-Ziel dieses Abschnitts ist die schnelle Sicherung des Flugzeugs am Boden bei aufrechterhaltener Strom- und Zapfluftversorgung, während das Aussteigen der Passagiere (Deboarding) beginnt.
+The goal of this section is to rapidly secure the aircraft on the ground with electrical power and air supply maintained while passenger deboarding begins.
 
-*   **APU Bleed & Power Check:** Verifizieren, dass **APU BLEED** auf **ON** steht (bzw. **EXT PWR** angeschlossen und auf **ON** ist).
-*   **Lights:** **BEACON** Light auf **OFF** schalten (Freigabe für Bodenpersonal/Jetway). **NAV & LOGO** bleibt auf **1** (oder **2**).
+*   **APU Bleed & Power Check:** Verify **APU BLEED** is **ON** (or **EXT PWR** connected and **ON**).
+*   **Lights:** Switch **BEACON** light to **OFF** (signals clearance for ground crew/jetway operator). **NAV & LOGO** remains on **1** (or **2**).
 *   **Deboarding & Ground Services (via flyPad):**
-    *   Über das FlyByWire flyPad (EFB) den Jetway ankoppeln und das Passagier-Deboarding auslösen.
-    *   Treibstoff- und Catering-Services via flyPad/GSX initiieren.
-*   **ADIRS Continuous Alignment:** Die drei ADIRS-Schalter bleiben auf **NAV** geschaltet. Eine erneute Schnell-Ausrichtung (Fast Re-Align) erfolgt bei Bedarf über die MCDU.
+    *   Connect jetway and initiate passenger deboarding via the FlyByWire flyPad (EFB).
+    *   Initiate refueling and catering services via flyPad / GSX.
+*   **ADIRS Continuous Alignment:** All three ADIRS selectors remain in **NAV**. Fast IRS re-alignment can be triggered via MCDU if required.
 
 ---
 
 ### 2. FMGEC / MCDU Reset & Re-Initialization
-Ziel dieser Phase ist das Bereinigen der alten Flugplandaten und die vollständige Programmierung des neuen Streckenabschnitts über den FlyByWire ATSU AOC Uplink.
+The objective of this phase is to clear previous flight plan data and fully program the new route segment via the FlyByWire ATSU AOC uplink.
 
-*   **SimBrief Uplink (Neues Leg):**
-    *   Im flyPad das neue SimBrief OFP laden.
-    *   MCDU Taste **MCDU MENU** drücken $\rightarrow$ LSK **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ LSK **INIT DATA REQ**.
-*   **INIT A Page:** Taste **INIT** drücken $\rightarrow$ LSK **INIT REQUEST** betätigen. **FROM/TO**, **FLT NBR**, **COST INDEX** und **CRZ FL** aktualisieren.
-*   **F-PLN (Flight Plan):** Departure Runway/SID sowie Anflugverfahren für das neue Leg eintragen und Flugplan auf Discontinuities prüfen.
-*   **INIT B Page:** Erneut **INIT** drücken $\rightarrow$ **NEXT PAGE** $\rightarrow$ LSK **ZFW/ZFWCG** und **BLOCK** betätigen, um die neuen Fracht- und Treibstoffwerte zu laden.
-*   **PERF Page:** Neue $V$-Speeds (**V1**, **VR**, **V2**), **FLEX TO TEMP** und Klappen/THS-Trimming aus dem flyPad übernehmen.
+*   **SimBrief Uplink (New Leg):**
+    *   Load the new SimBrief OFP into the flyPad.
+    *   Press **MCDU MENU** key $\rightarrow$ LSK **ATSU** $\rightarrow$ LSK **AOC MENU** $\rightarrow$ LSK **INIT/PRES** $\rightarrow$ press LSK **INIT DATA REQ**.
+*   **INIT A Page:** Press **INIT** key $\rightarrow$ press LSK **INIT REQUEST**. Update **FROM/TO**, **FLT NBR**, **COST INDEX**, and **CRZ FL**.
+*   **F-PLN (Flight Plan):** Enter departure runway/SID and arrival procedure for the new leg, and check the flight plan for discontinuities.
+*   **INIT B Page:** Press **INIT** key $\rightarrow$ **NEXT PAGE** $\rightarrow$ press LSK **ZFW/ZFWCG** and **BLOCK** to accept new weight and fuel figures.
+*   **PERF Page:** Enter new takeoff speeds (**V1**, **VR**, **V2**), **FLEX TO TEMP**, and flap/THS trim setting from the flyPad.
 
 ---
 
 ### 3. Pre-Departure Flow & Fast Cockpit Prep
-Erneute Herstellung der Abflugbereitschaft für den nachfolgenden Start.
+Re-establishing departure readiness for the subsequent flight.
 
-*   **Abschluss Boarding:** Nach Abschluss des Boardings Jetway trennen, Türen schließen.
-*   **Before Pushback Flow:** **SEAT BELTS** auf **ON**, **EMER EXIT LT** auf **ARM**, **BEACON** auf **ON**.
-*   **Pushback & Start:** Übergang zu [SOP – Abschnitt 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).
+*   **Finalize Boarding:** Once boarding is complete, disconnect jetway and close aircraft doors.
+*   **Before Pushback Flow:** **SEAT BELTS** to **ON**, **EMER EXIT LT** to **ARM**, **BEACON** to **ON**.
+*   **Pushback & Start:** Transition directly to [SOP – Section 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).
