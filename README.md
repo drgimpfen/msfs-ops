@@ -6,13 +6,13 @@ Dieses Repository enthält hochgradig praxisnahe, chronologische Standard Operat
 
 ## ✈️ Verfügbare Flugzeugtypen
 
-### 1. Airbus A320neo / FlyByWire A320NX
+### 1. FlyByWire Airbus A320NX
 - [Standard Operating Procedures (SOP)](fbw-a320nx/sop.md) – Vollständiger Ablauf von Cold & Dark bis Shutdown.
-- [Transit SOP (Turnaround)](fbw-a320nx/transit-sop.md) – Zeitoptimierter Transit-Ablauf gemäß Airbus FCOM für Multistop-Legs.
+- [Transit SOP (Turnaround)](fbw-a320nx/transit-sop.md) – Zeitoptimierter Transit-Ablauf für Quick Turnarounds.
 
-### 2. Airbus A330 Family (A330-200 & A330-300P2F)
-- [Standard Operating Procedures (SOP)](a330/sop.md) – Vollständiger Ablauf von Cold & Dark bis Shutdown (Pax & Cargo).
-- [Transit SOP (Turnaround)](a330/transit-sop.md) – Zeitoptimierter Transit-Ablauf für Quick Turnarounds.
+### 2. iniBuilds Airbus A330 (A330-200 & A330-300P2F)
+- [Standard Operating Procedures (SOP)](inibuilds-a330/sop.md) – Vollständiger Ablauf von Cold & Dark bis Shutdown (Pax & Cargo).
+- [Transit SOP (Turnaround)](inibuilds-a330/transit-sop.md) – Zeitoptimierter Transit-Ablauf für Quick Turnarounds.
 
 ---
 

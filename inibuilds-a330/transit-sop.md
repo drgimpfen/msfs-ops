@@ -1,6 +1,6 @@
 # Airbus A330 (A330-200 & A330-300P2F) – Transit Standard Operating Procedures (SOP)
 
-Diese SOP beschreibt die zeitoptimierte **Transit Procedure** (Turnaround) für Multistop-Flüge mit dem **Airbus A330-200** (Passagier) und **A330-300P2F** (Freighter) im **MSFS 2024** (z. B. iniBuilds A330) gemäß Airbus FCOM Standard.
+Diese SOP beschreibt die zeitoptimierte **Transit Procedure** (Turnaround) für Multistop-Flüge mit dem **iniBuilds Airbus A330-200** (Passagier) und **iniBuilds Airbus A330-300P2F** (Freighter) im **MSFS 2024** gemäß Airbus FCOM Standard.
 
 ### Zweck & Prozessbeschreibung des Transit-Ablaufs
 Bei kurzen Zwischenstopps am Gate oder Cargo Stand (Transit) wird das Flugzeug nicht vollständig heruntergefahren. Der Ablauf ist darauf ausgelegt, die Bodenzeit zu minimieren und das Flugzeug ohne Kaltstart sicher und effizient für das nächste Flugsegment vorzubereiten:

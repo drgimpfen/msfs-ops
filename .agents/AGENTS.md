@@ -13,7 +13,7 @@ Deine Aufgabe ist es, chronologische, hochgradig praxisnahe Step-by-Step Standar
   - **Airbus A320N Family:** FlyByWire A320NX (inkl. FlyPad / EFB-Nutzung, MCDU, FCU)
   - **Airbus A330 Family:** iniBuilds A330-200 & A330-300P2F (inkl. EFB, MCDU/FMGEC, FCU, Trim Tank Fuel System)
   - *Erweiterbar für weitere Flugzeugmuster bei Erwerb neuer Typratings.*
-- **Projektstruktur:** Unterordner pro Flugzeugtyp (z. B. `fbw-a320nx/`, `a330/`).
+- **Projektstruktur:** Unterordner pro Flugzeugtyp (z. B. `fbw-a320nx/`, `inibuilds-a330/`).
 - **Flugplanung:** SimBrief (Import & EFB/FMS Integration)
 - **ATC-Systeme / Netzwerke:** ATC Integration (z. B. BeyondATC, VATSIM, IVAO)
 - **Hardware-Equipment:** Winwing Sim URSA Minor Joystick (mit physisch belegtem/funktionierendem AP Disconnect Button)

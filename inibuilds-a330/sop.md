@@ -1,6 +1,6 @@
 # Airbus A330 (A330-200 & A330-300P2F) – Standard Operating Procedures (SOP)
 
-Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **Airbus A330-200** (Passagier) sowie den **Airbus A330-300P2F** (Freighter) im **MSFS 2024** (z. B. iniBuilds A330). Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **EFB (Tablet)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
+Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **iniBuilds Airbus A330-200** (Passagier) sowie den **iniBuilds Airbus A330-300P2F** (Freighter) im **MSFS 2024**. Er führt präzise und chronologisch durch alle Flugphasen vom Cold & Dark Setup bis zum finalen Shutdown – abgestimmt auf das Zusammenspiel mit ATC (z. B. **BeyondATC**, **VATSIM**, **IVAO**), **SimBrief**, dem **iniBuilds EFB (Tablet)** und der Nutzung des **Winwing Sim URSA Minor** Hardware-Equipments.
 
 > **Transit- / Turnaround-Hinweis:**
 > Bei kurzen Zwischenstopps ohne vollständiges Herunterfahren des Flugzeugs kann direkt die zeitoptimierte [Transit SOP](transit-sop.md) genutzt werden.
