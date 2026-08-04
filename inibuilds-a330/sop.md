@@ -19,15 +19,15 @@ Dieser Leitfaden beschreibt die Standard Operating Procedures (SOP) für den **i
 ### 1. Pre-Flight & Cockpit-Vorbereitung (Cold & Dark am Cargo Stand)
 Der Flug beginnt im stromlosen Zustand am Cargo Standplatz. Ziel dieser Phase ist die Herstellung der elektrischen Versorgungsbereitschaft, die Abwicklung der Fracht-Bodenabfertigung (Betankung, ULD Cargo Container Load, Main Deck Cargo Door) sowie die vollständige Programmierung und Initialisierung der Navigations- und Flugmanagementsysteme (FMGEC/MCDU).
 
-*   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** auf **ON** schalten. Das iniBuilds EFB (Tablet) hochfahren.
-*   **Initiale Lichter am Boden:** Direkt nach der Bestromung das **NAV & LOGO** Light auf **1** (oder **2**) schalten, um die Versorgungsbereitschaft dem Bodenpersonal anzuzeigen.
+*   **Elektrik einschalten:** Auf dem Overhead Panel nacheinander **BAT 1** und **BAT 2** auf **ON** schalten. Die Batteriespannung auf den Voltmeter-Anzeigen prüfen ($> 25{,}5\text{ V}$). Das iniBuilds EFB (Tablet) hochfahren.
+*   **Initiale Lichter am Boden:** Direkt nach der Bestromung das **NAV & LOGO** Light auf **1** (oder **2**) schalten. Position 1 schaltet das primäre Navigationslicht via AC Essential Bus ein und signalisiert dem Bodenpersonal die Versorgungsbereitschaft.
 *   **Ground Services & GPU (via EFB):** Im EFB unter *Ground Services* die Ground Power Unit (GPU) anfordern. Sobald am Overhead Panel das grüne *AVAIL*-Licht leuchtet, **EXT PWR** drücken (leuchtet blau *ON*).
     *   Über das EFB / GSX die **Main Deck Cargo Door** öffnen und Cargo Loaders sowie ULD Container beistellen lassen.
     *   Im EFB unter *Payload/Fuel* SimBrief-Daten laden und den Betankungs- sowie Beladungsprozess für Fracht initiieren.
 *   **Overhead Panel Setup:**
     *   **CREW SUPPLY** (Sauerstoff) auf **ON** schalten.
     *   Treibstoffpumpen (**MAIN PUMPS 1 & 2**, **STANDBY PUMPS**, **CENTER PUMP**, **TRIM TANK PUMP**) auf **ON** bzw. **AUTO** prüfen.
-    *   Signale & Notbeleuchtung: **EMER EXIT LT** auf **ARM** setzen. **NO SMOKING** auf **ON** oder **AUTO** setzen. **SEAT BELTS** auf **ON** setzen.
+    *   Signale & Notbeleuchtung: **EMER EXIT LT** auf **ARM** setzen. **NO SMOKING** auf **ON** oder **AUTO** setzen. **SEAT BELTS** auf **ON** setzen (schaltet die Anschnallzeichen für den Courier / Supernumerary Crew Bereich ein).
 *   **ATC IFR Clearance:** Streckenfreigabe bei ATC (Delivery/Ground) einholen: *"Request IFR Clearance"*. Nach Erhalt die freigegebene Höhe an der FCU (Flight Control Unit) eindrehen und Squawk am Transponder einstellen.
 *   **ADIRUs Initialisierung:** Auf dem Overhead Panel die drei ADIRS-Wahlschalter (1, 2, 3) von OFF auf **NAV** drehen.
 *   **Detailliertes MCDU / FMGEC Setup:**
@@ -88,6 +88,7 @@ Diese Phase beinhaltet das Einrollen zur aktiven Startbahn. Ziel ist das sichere
     *   **FLAPS** auf berechnete Startstellung (z. B. **FLAPS 1** oder **FLAPS 2** je nach Abfluggewicht) setzen.
     *   **GND SPOILERS** armieren (nach oben ziehen).
     *   **PITCH TRIM** Wheel gemäß MCDU-Wert (THS, z. B. 0.8 UP) einstellen.
+    *   **RUD TRIM:** Verifizieren, dass die Rudertrimmung auf `0.0°` steht (**RESET** betätigen falls erforderlich).
     *   **AUTOBRAKE** auf **MAX** setzen.
 *   **Wetterradar & Anti-Ice Setup:**
     *   **WXR RADAR PANEL:** **SYS** auf **1** (oder **2**), **PWS** auf **AUTO**, **MODE** auf **WX** oder **WX+T** stellen.
@@ -108,7 +109,7 @@ Ankunft am Holding Point und Durchführung des Startlaufs. Ziel dieser Phase ist
 *   **ATC Freigabe:** Bei ATC *"Ready for Departure"* melden. Auf *"Line up and wait"* oder *"Cleared for Takeoff"* warten.
 *   **Lichter & System-Check für den Startlauf (Line-up):** Beim Einrollen auf die Startbahn:
     *   **STROBE** von AUTO auf **ON** schalten.
-    *   **LANDING** Lights (beide) auf **ON** schalten.
+    *   **LANDING L & R** Schalter (beide Schalter der Fixed Wing-Root Lichter) auf **ON** schalten.
     *   **NOSE** Light von TAXI auf **T.O.** (Takeoff) schalten.
     *   **CALLS PANEL (Overhead):** Den **ALL**-Knopf drücken (oder **SEAT BELTS** Signs triggern), um der Kabinenbesatzung den Startlauf zu signalisieren (*"Cabin Crew, take your seats for takeoff"*).
     *   **TCAS & PWS Check:** Verifizieren, dass **TCAS** auf **TA/RA** und **PWS** auf **AUTO** steht.
@@ -129,7 +130,7 @@ Ankunft am Holding Point und Durchführung des Startlaufs. Ziel dieser Phase ist
 *   **Transition Altitude (Baro Reference Switch):**
     *   Beim Passieren der Transition Altitude den **BARO**-Knopf ziehen (**BARO KNOB PULL**), um auf **STD** (Standard 1013.25 hPa / 29.92 inHg) umzuschalten.
 *   **10.000 ft AAL (Climb):**
-    *   **LANDING** Lights auf **OFF**. **NOSE** Light auf **OFF**. **RWY TURN OFF** Lights auf **OFF**.
+    *   **LANDING L & R** Schalter auf **OFF**. **NOSE** Light auf **OFF**. **RWY TURN OFF** Lights auf **OFF**.
     *   **SEAT BELTS** auf **OFF** schalten (sofern wetterbedingt möglich).
 
 ---
@@ -151,6 +152,12 @@ Diese Phase umfasst den Reiseflug sowie die Vorbereitung auf die Landung. Ziel i
     *   Ca. 5–10 NM vor TOD die freigegebene untere Flughöhe an der **FCU** eindrehen.
     *   **Managed Descent (Push / DES):** Am TOD den **ALT**-Knopf drücken ("Push"). Punkt erscheint im FCU-Display, FMA zeigt **DES**.
     *   **Open Descent (Pull / OP DES):** **ALT**-Knopf ziehen ("Pull"). Punkt erlischt, FMA zeigt **OP DES**.
+*   **Passieren von FL100 / 10.000 ft AAL (Descent):**
+    *   **LANDING L & R** Schalter auf **ON** schalten.
+    *   **SEAT BELTS** auf **ON** schalten.
+    *   **EFIS Panel:** **LS**-Button vorbereiten, barometrische Referenz (**BARO**) auf Ziel-QNH umstellen (spätestens bei Transition Level).
+    *   **MCDU RAD NAV:** ILS-Frequenz und Inbound-Kurs auf Plausibilität verifizieren.
+    *   *(Hinweis: Ein Passagier-Cabin-Call entfällt beim Cargo-Frachter).*
 
 ---
 
@@ -189,7 +196,7 @@ Nach dem Verlassen der Piste beginnt das Abrollen zur Parkposition. Ziel dieser 
 > * **Triebwerks-Abkühlzeit:** Die 3-minütige Abkühlphase bei Idle-Schub schützt die Turbinenwellen vor thermischem Schock. Die Rollzeit vom Verlassen der Piste bis zum Gate wird dabei vollständig als Abkühlzeit angerechnet.
 
 *   **Runway Vacated:**
-    *   Sobald Holding-Linie überrollt ist: **STROBE** auf **AUTO** (oder **OFF**), **LANDING** Lights auf **OFF**, **NOSE** Light auf **TAXI**. **RWY TURN OFF** Lights auf **OFF**.
+    *   Sobald Holding-Linie überrollt ist: **STROBE** auf **AUTO** (oder **OFF**), **LANDING L & R** Schalter auf **OFF**, **NOSE** Light auf **TAXI**. **RWY TURN OFF** Lights auf **OFF**.
     *   **WXR RADAR PANEL:** **SYS** und **PWS** auf **OFF** schalten.
     *   **TCAS & XPDR:** **TCAS MODE** auf **STBY** (oder `TA ONLY`), **ATC/XPDR MODE** auf **AUTO** / **STBY**.
     *   **FLAPS:** Klappen auf **0** einfahren. **GND SPOILERS:** Spoilers disarmieren.
