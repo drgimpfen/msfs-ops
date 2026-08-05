@@ -163,19 +163,20 @@ This phase covers cruise monitoring and descent/landing preparation. The goal is
 ### 6. Approach & Landing
 This phase covers initial approach through touchdown. The goal is establishing landing configuration, capturing guidance signals (ILS Localizer & Glideslope), timely manual takeover, touchdown, and deceleration.
 
-*   **Initial Approach & LS Activation:**
+*   **Initial Approach & Deceleration (DECEL Pseudo-Waypoint):**
     *   **LS Button (EFIS Panel):** When entering approach sector, press **LS** button to display ILS scales on PFD.
-    *   At Green Dot Speed: Select **FLAPS 1**.
+    *   Passing **(DECEL)** pseudo-waypoint (or activating APPR phase on MCDU PERF page) automatically manages target speeds on PFD:
+        *   At Green Dot Speed: Select **FLAPS 1**.
+        *   At S-Speed: Select **FLAPS 2**.
 *   **Approach Clearance & APPR Activation (FCU):**
     *   Upon receiving approach clearance (*"Cleared ILS Approach Runway..."*) and on intercept heading:
         *   **APPR Button:** Press **APPR** button on FCU (FMA displays `LOC` blue and `G/S` blue).
         *   **AP2 Button:** Press **AP2** button on FCU for Dual-Channel Autoland / CAT III preparation (FMA displays `AP 1+2`).
 *   **Established Report (ATC Communication):**
     *   Once Localizer is captured (FMA displays `LOC` green): Report to ATC: *"Established ILS Runway [Runway Identifier]"*.
-*   **Final Approach Sequence & Flaps Timeline:**
-    *   At S-Speed: Select **FLAPS 2**.
-    *   At approx. 2,000 ft AAL (or 1/2 dot below Glideslope): Select **GEAR DOWN**, arm **GND SPOILERS**, switch **NOSE** light to **T.O.**, switch **RWY TURN OFF** lights to **ON**.
-    *   Below VFE for Flaps 3: Select **FLAPS 3**, followed by **FLAPS FULL** at F-speed.
+*   **Final Approach Sequence & Gear Extension:**
+    *   At 1 Dot below Glideslope (approx. 2,000 ft AAL / 6 NM out): Select **GEAR DOWN**, arm **GND SPOILERS**, switch **NOSE** light to **T.O.**, switch **RWY TURN OFF** lights to **ON**.
+    *   As speed decelerates: Select **FLAPS 3**, followed by **FLAPS FULL** at F-speed. Ensure full landing configuration is established prior to 1,000 ft AAL.
     *   **AUTOBRAKE:** Select **MED** or **LOW**. Execute Landing Checklist.
 *   **Autopilot Disconnect (Manual Landing):**
     *   Once runway is in sight and aircraft is stabilized (between 1,000 ft and 500 ft AGL), take manual control.
