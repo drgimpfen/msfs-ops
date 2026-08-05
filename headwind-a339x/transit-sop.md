@@ -40,6 +40,12 @@ The objective of this phase is to clear previous flight plan data and fully prog
 ### 3. Pre-Departure Flow & Fast Cockpit Prep
 Re-establishing departure readiness for the subsequent flight.
 
-*   **Finalize Boarding:** Once boarding is complete, disconnect jetway and close aircraft doors.
-*   **Before Pushback Flow:** **SEAT BELTS** to **ON**, **EMER EXIT LT** to **ARM**, **BEACON** to **ON**.
-*   **Pushback & Start:** Transition directly to [SOP – Section 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).
+*   **Cockpit Re-Arming & Safety Flow:**
+    *   **FUEL PUMPS:** Switch all six **FUEL PUMPS** (L TK, C TK, R TK) to **ON**.
+    *   **Passenger Signs:** Switch **SEAT BELTS** to **ON** (signals passengers to remain seated prior to pushback).
+    *   **BARO Reference:** Set FCU barometric reference (**BARO**) to local departure airport QNH.
+    *   **XPDR / Transponder:** Set assigned squawk code from ATC clearance, verify **ATC/XPDR MODE** is set to **AUTO** / **STBY**.
+*   **Finalize Boarding & Pushback Transition:**
+    *   Once boarding is complete, disconnect jetway and close aircraft doors.
+    *   **Before Pushback Flow:** Verify **EMER EXIT LT** on **ARM**, switch **BEACON** light to **ON**.
+    *   **Pushback & Start:** Transition directly to [SOP – Section 2: Engine Start & Pushback](sop.md#2-engine-start--pushback).

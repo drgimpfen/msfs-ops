@@ -55,6 +55,8 @@ This phase covers immediate engine start preparation. The goal is starting the A
     *   Request pushback and start clearance from ATC Ground: *"Request Pushback and Engine Start"*.
     *   Upon clearance (*"Pushback and Engine Start approved"*), switch **BEACON** light to **ON**.
 *   **Before Start Flow & Checklist:**
+    *   **FUEL PUMPS:** Verify all six **FUEL PUMPS** are **ON**.
+    *   **SEAT BELTS:** Verify **SEAT BELTS** switch is **ON**.
     *   **THRUST LEVERS:** Verify both thrust levers are in **IDLE** detent.
     *   **PARKING BRAKE:** Remains **ON**.
     *   Complete Before Start Checklist down to line / below line.

@@ -80,6 +80,11 @@ The FMGEC must be cleared and completely reprogrammed for the next segment.
 ### 4. Transition Back to Standard SOP
 Once MCDU programming is complete, cargo loading is finalizing, and the cockpit is prepared, transition back into the standard procedure takes place:
 
+*   **Cockpit Re-Arming & Safety Flow:**
+    *   **FUEL PUMPS:** Switch all six **FUEL PUMPS** (L TK, C TK, R TK) to **ON**.
+    *   **Signs & Safety:** Switch **SEAT BELTS** to **ON** (illuminates seat belt signs for courier / supernumerary crew area prior to pushback).
+    *   **BARO Reference:** Set FCU barometric reference (**BARO**) to local departure airport QNH.
+    *   **XPDR / Transponder:** Set assigned squawk code from ATC clearance, verify **ATC/XPDR MODE** is set to **AUTO** / **STBY**.
 *   **Seamless Re-entry:**
     *   Close Main Deck Cargo Door via EFB.
     *   **Brake Fan Check:** Check ECAM WHEEL page. Verify brake temperatures are below 150°C and **BRK FAN** is **OFF**.
