@@ -131,7 +131,6 @@ Arrival at holding point and takeoff roll execution. The goal is obtaining takeo
     *   When passing Transition Altitude, pull **BARO** knob (**BARO KNOB PULL**) to switch to **STD** (Standard 1013.25 hPa / 29.92 inHg).
 *   **10,000 ft AAL (Climb):**
     *   Switch **LANDING L & R** switches to **OFF**. Switch **NOSE** light to **OFF**. Switch **RWY TURN OFF** lights to **OFF**.
-    *   Switch **SEAT BELTS** to **OFF** (weather permitting).
 
 ---
 
@@ -142,6 +141,7 @@ This phase covers cruise monitoring and descent/landing preparation. The goal is
 > Cruise phase serves early approach preparation and briefing (*Aviate, Navigate, Communicate*). Energy management is top priority. Perform descent plausibility check (3 NM distance per 1,000 ft altitude loss).
 
 *   **Cruise & Trim Tank Monitoring:**
+    *   Switch **SEAT BELTS** to **OFF** upon reaching cruising altitude (weather permitting).
     *   Regularly monitor flight path, fuel burn, and FMA status (`SPEED`, `ALT CRZ`, `NAV`).
     *   *Trim Tank System (A330 Specifics):* During climb, the automatic A330 fuel system transfers fuel from wing tanks to the tail trim tank to shift Center of Gravity (CG) aft for minimum cruise drag. Automatic forward transfer occurs prior to descent/landing.
 *   **Descent Planning & Approach Setup (approx. 80 NM prior to TOD):**
@@ -149,12 +149,12 @@ This phase covers cruise monitoring and descent/landing preparation. The goal is
     *   **MCDU PERF APPR Page:** Enter QNH, Temperature, MAG WIND, Decision Altitude (**BARO** / **RADIO** minimums), and flap configuration (**CONF FULL** or **CONF 3**).
     *   **F-PLN:** Verify and activate destination STAR and Approach.
 *   **Descent Initiation & FCU Operation (DES vs. OP DES):**
+    *   Switch **SEAT BELTS** to **ON** prior to or at TOD.
     *   Dial cleared lower ATC altitude on **FCU** approx. 5–10 NM prior to TOD.
     *   **Managed Descent (Push / DES):** At TOD, press **ALT** knob ("Push"). Dot appears in FCU display, FMA displays **DES**.
     *   **Open Descent (Pull / OP DES):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP DES**.
 *   **Passing FL100 / 10,000 ft AAL (Descent):**
     *   Switch **LANDING L & R** switches to **ON**.
-    *   Switch **SEAT BELTS** to **ON**.
     *   **EFIS Panel:** Prepare **LS** button, pre-select barometric reference (**BARO**) to destination QNH (set at Transition Level).
     *   **MCDU RAD NAV:** Verify tuned ILS frequency and inbound course.
     *   *(Note: Passenger cabin call is omitted on cargo freighters).*

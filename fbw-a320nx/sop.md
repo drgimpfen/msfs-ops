@@ -134,14 +134,13 @@ Arrival at holding point and takeoff roll execution. The goal is obtaining takeo
     *   When passing Transition Altitude (BARO display flashes on PFD): Pull **BARO** knob (**BARO KNOB PULL**) to switch from QNH to **STD** (Standard 1013.25 hPa / 29.92 inHg).
 *   **10,000 ft AAL (Climb):**
     *   Move **LANDING L & R** switches from ON to **RETRACT**. Switch **NOSE** light to **OFF**. Switch **RWY TURN OFF** lights to **OFF**.
-    *   Switch **SEAT BELTS** to **OFF** (weather permitting).
 
 ---
 
 ### 5. Cruise, Descent Planning & Approach Setup
 This phase covers cruise monitoring and descent/landing preparation. The goal is continuous system/fuel monitoring, acquiring destination weather, and completing MCDU/FCU programming for descent and approach.
 
-*   **Cruise Monitoring:** Regularly monitor fuel progress via MCDU PROG page and ECAM FUEL page.
+*   **Cruise Monitoring & Top of Climb (TOC):** Switch **SEAT BELTS** to **OFF** upon reaching cruising altitude (weather permitting). Regularly monitor fuel progress via MCDU PROG page and ECAM FUEL page.
 *   **Weather & Arrival Clearance (ATC Handoff):** Approx. 80–100 NM prior to Top of Descent (TOD), obtain destination ATIS, contact ATC, and confirm arrival routing.
 *   **MCDU Arrival Setup:**
     *   Press **F-PLN** key, scroll to destination, select **ARRIVAL**.
@@ -151,12 +150,12 @@ This phase covers cruise monitoring and descent/landing preparation. The goal is
     *   Press **PERF** key and navigate to **APPR** page.
     *   Enter **QNH**, **TEMP**, **MAG WIND**, and Decision Altitude (**BARO** / **RADIO** minimums).
 *   **Descent Initiation & FCU Operation (DES vs. OP DES):**
+    *   Switch **SEAT BELTS** to **ON** prior to or at TOD.
     *   **FCU Altitude Pre-Select:** Dial cleared lower ATC altitude on **FCU** approx. 5–10 NM prior to TOD.
     *   **Managed Descent (Push / DES):** At TOD, press **ALT** knob ("Push"). Dot appears in FCU display, FMA displays **DES**. Aircraft follows computed profile complying with MCDU constraints.
     *   **Open Descent (Pull / OP DES):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP DES**. Aircraft descends at idle thrust directly to selected altitude.
 *   **Passing FL100 / 10,000 ft AAL (Descent):**
     *   Move **LANDING L & R** switches from RETRACT to **ON**.
-    *   Switch **SEAT BELTS** to **ON**.
     *   **CALLS PANEL (Overhead):** Press **ALL** button (or trigger **SEAT BELTS** switch) to notify cabin crew (*"Cabin Crew, prepare for landing"*).
     *   **EFIS Panel:** Prepare **LS** button, pre-select barometric reference (**BARO**) to destination QNH (set at Transition Level).
     *   **MCDU RAD NAV:** Verify tuned ILS frequency and inbound course.
