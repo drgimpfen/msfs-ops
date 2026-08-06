@@ -118,9 +118,9 @@ This phase includes taxiing to the active runway, configuring flight systems (fl
 ### 4. Takeoff & Departure
 Arrival at holding point and takeoff roll execution. The goal is obtaining takeoff clearance, setting takeoff power, executing a smooth rotation, initial climb, and transition into the climb profile (Thrust Reduction & Clean-Up).
 
-> **Airbus FCU Operational Logic & Guidance Modes (Push vs. Pull):**
-> * **Managed Guidance (Push Knob $\rightarrow$ "Push to give control to the aircraft"):** Pushing FCU knobs inward (**PUSH**) delegates lateral and vertical flight path guidance to the FMGS profile (**CLB**, **DES**, **NAV**). Managed targets comply with MCDU altitude, speed, and constraint profiles, indicated by a white dot next to the FCU window on the PFD tape.
-> * **Selected Guidance (Pull Knob $\rightarrow$ "Pull to take control yourself"):** Pulling FCU knobs outward (**PULL**) overrides FMGS profile constraints for direct pilot selection (**OP CLB**, **OP DES**, **HDG/TRK**). Selected targets clear the managed dot on the PFD and command direct climbs/descents or tactical vectoring per pilot inputs.
+> **Airbus FCU Climb Guidance Modes (Push vs. Pull):**
+> * **Managed Climb (Push / CLB):** Press **ALT** knob on FCU ("Push"). A white dot appears next to altitude on PFD, FMA displays **CLB**. System follows MCDU vertical profile complying with SID altitude/speed restrictions.
+> * **Open Climb (Pull / OP CLB):** Pull **ALT** knob on FCU ("Pull") if ATC cancels restrictions (*"cancel level restrictions"*). Managed dot extinguishes, FMA displays **OP CLB**. Aircraft climbs directly to dialed altitude.
 
 *   **ATC Clearance:** Report to ATC: *"Ready for Departure"*. Await *"Line up and wait"* or *"Cleared for Takeoff"*.
 *   **Line-Up Exterior Lighting:** When entering and lining up on the active runway, set line-up lighting:
@@ -155,6 +155,10 @@ Arrival at holding point and takeoff roll execution. The goal is obtaining takeo
 
 ### 5. Cruise, Descent Planning & Approach Setup
 This phase covers cruise monitoring and descent/landing preparation. The goal is continuous system/fuel monitoring, acquiring destination weather, and completing MCDU/FCU programming for descent and approach.
+
+> **Airbus FCU Descent Guidance Modes (Push vs. Pull):**
+> * **Managed Descent (Push / DES):** Press **ALT** knob on FCU ("Push") at TOD. A white dot appears next to altitude on PFD, FMA displays **DES**. Aircraft follows computed vertical profile complying with MCDU altitude constraints.
+> * **Open Descent (Pull / OP DES):** Pull **ALT** knob on FCU ("Pull"). Managed dot extinguishes, FMA displays **OP DES**. Aircraft descends at idle thrust directly to selected altitude.
 
 *   **Cruise Monitoring & Top of Climb (TOC):** Switch **SEAT BELTS** to **OFF** upon reaching cruising altitude (weather permitting). Regularly monitor fuel progress via MCDU PROG page and ECAM FUEL page.
 *   **Weather & Arrival Clearance (ATC Handoff):** Approx. 80–100 NM prior to Top of Descent (TOD), obtain destination ATIS, contact ATC, and confirm arrival routing.
