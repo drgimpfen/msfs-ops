@@ -70,6 +70,17 @@ For any SOP creation or modification, the following rules must be strictly obser
    - All links within Markdown documents (SOPs, READMEs, etc.) must use **relative links** (e.g., `transit-sop.md` or `sop.md#2-engine-start--pushback`).
    - Absolute local filesystem paths or schema links (such as `file:///...` or `c:/...`) must never be placed in repository files.
 
+9. **Isolated & Unbundled System Actions:**
+   - Never nest or chain multiple switch actions, ATC clearances, radar/TCAS setups, or procedure flows into single sentences or paragraph blocks.
+   - Format every individual cockpit switch action, system check, or lighting control as an isolated, standalone primary or sub-bullet point for maximum checklist readability and ergonomics.
+
+10. **Explicit STROBE Light Lifecycle:**
+    - STROBE lights must follow an explicit, unambiguous transition cycle across flight phases:
+      - **Cockpit Preparation (Sec. 1):** Set **STROBE** to **AUTO**.
+      - **Line-Up (Sec. 4):** Switch **STROBE** from AUTO to **ON**.
+      - **Runway Vacated (Sec. 7):** Switch **STROBE** from ON to **AUTO**.
+      - **Securing Aircraft (Sec. 7):** Switch **STROBE** from AUTO to **OFF**.
+
 ---
 
 ## 5. Planning & Execution Modes

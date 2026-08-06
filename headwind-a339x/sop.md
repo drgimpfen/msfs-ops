@@ -20,14 +20,19 @@ This guide describes the Standard Operating Procedures (SOP) for the **Headwind 
 The flight originates in an unpowered state at the gate. The objective of this phase is to establish electrical power, process passenger ground handling (refueling, boarding via jetway/stairs), and complete FMGS/MCDU initialization via FlyByWire ATSU architecture.
 
 *   **Power On:** On the Overhead Panel, switch **BAT 1** and **BAT 2** to **ON**. Check battery voltage on digital voltmeters ($> 25.5\text{ V}$). Power up the FlyByWire flyPad (EFB) on the left captain's console.
-*   **Initial Ground Lighting:** Immediately after powering on, switch **NAV & LOGO** light to **1** (or **2**). Position 1 powers navigation lights via the AC Essential Bus, signaling electrical readiness to ground personnel.
+*   **Initial Ground Lighting:** Immediately after powering on, set initial exterior lighting:
+    *   Switch **NAV & LOGO** light to **1** (or **2**). Position 1 powers navigation lights via the AC Essential Bus, signaling electrical readiness to ground personnel.
+    *   Set **STROBE** light switch to **AUTO**.
 *   **Ground Services & GPU (via flyPad):** Navigate to *Ground Services* in the flyPad and request the Ground Power Unit (GPU). When the green *AVAIL* light illuminates on the overhead panel, press **EXT PWR** (blue *ON* illuminates).
     *   Connect jetway (passenger boarding bridge) via flyPad.
     *   Navigate to *Payload/Fuel* in the flyPad, fetch SimBrief data, and initiate *Refueling* and passenger/baggage *Boarding*.
-*   **Overhead Panel Setup:**
+*   **Overhead Panel Systems Setup:**
     *   Switch **CREW SUPPLY** (Oxygen) to **ON**.
     *   Verify all fuel pumps (**FUEL PUMPS**) are **ON** or **AUTO**.
-    *   Passenger signs & emergency lighting: Set **EMER EXIT LT** to **ARM**. Set **NO SMOKING** to **ON** or **AUTO**. Set **SEAT BELTS** to **ON**.
+*   **Passenger Signs & Emergency Lighting:**
+    *   Set **EMER EXIT LT** to **ARM**.
+    *   Set **NO SMOKING** to **ON** or **AUTO**.
+    *   Set **SEAT BELTS** to **ON**.
 *   **ATC IFR Clearance:** Request clearance from ATC Delivery/Ground: *"Request IFR Clearance"*. Set cleared initial altitude on FCU and tune the transponder squawk code.
 *   **ADIRUs Initialization:** On the Overhead Panel, turn all three ADIRS selectors (1, 2, 3) from OFF to **NAV**.
 *   **Detailed MCDU / ATSU Setup (FlyByWire Architecture):**
@@ -50,9 +55,8 @@ This phase covers immediate engine start preparation. The goal is starting the A
 *   **Disconnect Ground Power (GPU Disconnect):**
     *   Switch **EXT PWR** on Overhead Panel to **OFF** (blue ON extinguishes, green AVAIL remains).
     *   Disconnect GPU via flyPad *Ground Services*.
-*   **ATC Clearance & Beacon Light:**
-    *   Request pushback and engine start clearance from ATC Ground: *"Request Pushback and Engine Start"*.
-    *   Upon clearance (*"Pushback and Engine Start approved"*), switch **BEACON** light to **ON**.
+*   **ATC Pushback Clearance:** Request pushback and engine start clearance from ATC Ground: *"Request Pushback and Engine Start"* and receive ground approval.
+*   **Beacon Light:** Upon pushback and start clearance, switch **BEACON** light to **ON** (signals engine start readiness and area warning to ground personnel).
 *   **Before Start Flow & Checklist:**
     *   **FUEL PUMPS:** Verify all six **FUEL PUMPS** are **ON**.
     *   **SEAT BELTS:** Verify **SEAT BELTS** switch is **ON**.
@@ -84,15 +88,20 @@ This phase covers immediate engine start preparation. The goal is starting the A
 ### 3. Taxi & Before Takeoff Preparation
 This phase includes taxiing to the active runway, configuring flight systems (flaps, trim, spoilers, WXR/TCAS), and performing final technical takeoff checks (T/O Config & Flight Controls Check).
 
-*   **ATC Clearance & Taxi Lighting:** Request taxi clearance from ATC: *"Request Taxi"*. Upon clearance, switch **NOSE** light to **TAXI**. Switch **RWY TURN OFF** lights to **ON** when maneuvering on taxiways or crossing runways.
+*   **ATC Taxi Clearance:** Request taxi clearance from ATC: *"Request Taxi"* and receive assigned taxi routing.
+*   **Taxi & Exterior Lighting Setup:** Upon receiving taxi clearance, set exterior lights prior to taxiing:
+    *   Switch **NOSE** light to **TAXI**.
+    *   Switch **RWY TURN OFF** lights to **ON** (for maneuvering on taxiways or crossing active runways).
 *   **After Start Flow / T/O Config:**
     *   Set **FLAPS** to calculated takeoff position (e.g., **FLAPS 1** or **FLAPS 2**).
     *   Arm **GND SPOILERS** (pull speedbrake lever UP).
     *   Set **PITCH TRIM** wheel according to MCDU THS calculation (e.g., 0.8 UP).
     *   **RUD TRIM:** Verify rudder trim reads `0.0°` (press **RESET** if required).
     *   Set **AUTOBRAKE** to **MAX**.
-*   **Weather Radar & Anti-Ice Setup:**
-    *   **WXR RADAR PANEL:** Set **SYS** to **1** (or **2**), **PWS** to **AUTO**, **MODE** to **WX** or **WX+T**.
+*   **Weather Radar Setup:**
+    *   Set **SYS** switch to **1** (or **2**).
+    *   Set **PWS** switch to **AUTO**.
+    *   Set **MODE** switch to **WX** or **WX+T**.
     *   **ENG / WING ANTI ICE:** Switch ON as required if OAT $\le 10^\circ\text{C}$ in visible moisture.
 *   **Transponder & TCAS Setup:**
     *   Set **ATC / XPDR MODE** to **AUTO** (or **ON**).
@@ -107,14 +116,18 @@ This phase includes taxiing to the active runway, configuring flight systems (fl
 ### 4. Takeoff & Departure
 Arrival at holding point and takeoff roll execution. The goal is obtaining takeoff clearance, setting takeoff power, executing a smooth rotation, initial climb, and transition into climb profile (Thrust Reduction & Clean-Up).
 
+> **Airbus FCU Operational Logic & Guidance Modes (Push vs. Pull):**
+> * **Managed Guidance (Push Knob $\rightarrow$ "Push to give control to the aircraft"):** Pushing FCU knobs inward (**PUSH**) delegates lateral and vertical flight path guidance to the FMGS profile (**CLB**, **DES**, **NAV**). Managed targets comply with MCDU altitude, speed, and constraint profiles, indicated by a white dot next to the FCU window on the PFD tape.
+> * **Selected Guidance (Pull Knob $\rightarrow$ "Pull to take control yourself"):** Pulling FCU knobs outward (**PULL**) overrides FMGS profile constraints for direct pilot selection (**OP CLB**, **OP DES**, **HDG/TRK**). Selected targets clear the managed dot on the PFD and command direct climbs/descents or tactical vectoring per pilot inputs.
+
 *   **ATC Clearance:** Report to ATC: *"Ready for Departure"*. Await *"Line up and wait"* or *"Cleared for Takeoff"*.
-*   **Line-up System & Lighting Check:** When entering the runway:
-    *   Switch **STROBE** from AUTO to **ON**.
+*   **Line-Up Exterior Lighting:** When entering and lining up on the active runway, set line-up lighting:
+    *   Switch **STROBE** light from AUTO to **ON**.
     *   Switch single **LANDING** light switch to **ON**.
     *   Switch **NOSE** light from TAXI to **T.O.** (Takeoff).
-    *   **CALLS PANEL (Overhead):** Press **ALL** button (or trigger **SEAT BELTS** signs) to signal takeoff to cabin crew (*"Cabin Crew, take your seats for takeoff"*).
-    *   **TCAS & PWS Check:** Verify **TCAS** is **TA/RA** and **PWS** is **AUTO**.
-    *   **ECAM T/O MEMO Visual Check:** Once cabin is ready, `CABIN READY` switches to green on ECAM. Visually verify all ECAM T/O MEMO lines are green.
+*   **Cabin Takeoff Notification:** Press **ALL** button on **CALLS PANEL** (or toggle **SEAT BELTS** signs) to signal takeoff to cabin crew (*"Cabin Crew, take your seats for takeoff"*).
+*   **TCAS & PWS Verification:** Verify **TCAS** is set to **TA/RA** and **PWS** is set to **AUTO**.
+*   **ECAM T/O MEMO Visual Check:** Once cabin is ready, `CABIN READY` switches to green on ECAM. Visually verify all ECAM T/O MEMO lines are green.
 *   **Takeoff Roll & Power Set:**
     *   Release brakes, advance **THRUST LEVERS** symmetrically to approx. 50% N1 and await stabilization.
     *   Advance thrust levers into **FLEX/MCT** (or **TOGA**) detent.
@@ -123,15 +136,16 @@ Arrival at holding point and takeoff roll execution. The goal is obtaining takeo
 *   **Post Takeoff & Departure Handoff:**
     *   At positive rate of climb: *"Positive Climb"* $\rightarrow$ **LANDING GEAR** lever **UP**.
     *   **ATC Handoff:** Perform frequency change to Departure/Radar upon instruction.
-    *   **Autopilot Activation & Climb Logic:** Above 100 ft AGL, **AP1** can be engaged by pressing **AP1** button on FCU.
-        *   **Managed Climb (Push / CLB):** Press **ALT** knob on FCU ("Push"). Dot appears in FCU display, FMA displays **CLB**.
-        *   **Open Climb (Pull / OP CLB):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP CLB**.
+    *   **Autopilot Engagement:** Above 100 ft AGL, press **AP1** button on FCU.
+    *   **Climb Mode Engagement:** Push **ALT** knob on FCU (**ALT KNOB PUSH**) to engage **CLB** mode (or pull **ALT** knob for **OP CLB** if level restrictions are canceled by ATC).
     *   At Thrust Reduction Altitude (**LVR CLB** flashes on FMA): Retract **THRUST LEVERS** manually into **CL** detent.
     *   **Acceleration Altitude & Clean Up:** Retract flaps incrementally according to F/S speeds (**FLAPS 0**). Disarm **GND SPOILERS**.
 *   **Transition Altitude (Baro Reference Switch):**
     *   When passing Transition Altitude, pull **BARO** knob (**BARO KNOB PULL**) to switch to **STD** (Standard 1013.25 hPa / 29.92 inHg).
-*   **10,000 ft AAL (Climb):**
-    *   Switch single **LANDING** light switch to **OFF**. Switch **NOSE** light to **OFF**. Switch **RWY TURN OFF** lights to **OFF**.
+*   **10,000 ft AAL Lighting Clean-Up:**
+    *   Switch single **LANDING** light switch to **OFF**.
+    *   Switch **NOSE** light to **OFF**.
+    *   Switch **RWY TURN OFF** lights to **OFF**.
 
 ---
 
@@ -149,15 +163,13 @@ This phase covers cruise monitoring and descent/landing preparation. The goal is
     *   Obtain destination weather (ATIS).
     *   **MCDU PERF APPR Page:** Enter QNH, Temperature, MAG WIND, Decision Altitude (**BARO** / **RADIO** minimums), and flap configuration (**CONF FULL** or **CONF 3**).
     *   **F-PLN:** Verify and activate destination STAR and Approach.
-*   **Descent Initiation & FCU Operation (DES vs. OP DES):**
-    *   Switch **SEAT BELTS** to **ON** prior to or at TOD.
-    *   Dial cleared lower ATC altitude on **FCU** approx. 5–10 NM prior to TOD.
-    *   **Managed Descent (Push / DES):** At TOD, press **ALT** knob ("Push"). Dot appears in FCU display, FMA displays **DES**.
-    *   **Open Descent (Pull / OP DES):** Pull **ALT** knob ("Pull"). Dot extinguishes, FMA displays **OP DES**.
+
+*   **Passenger Signs:** Switch **SEAT BELTS** to **ON** prior to reaching TOD.
+*   **Descent Initiation:** Dial cleared lower altitude on **FCU** approx. 5–10 NM prior to TOD. At TOD, push **ALT** knob on FCU (**ALT KNOB PUSH**) to engage **DES** mode (or pull **ALT** knob for **OP DES**).
 *   **Passing FL100 / 10,000 ft AAL (Descent):**
-    *   Switch single **LANDING** light switch to **ON**.
-    *   **CALLS PANEL (Overhead):** Press **ALL** button (or trigger **SEAT BELTS** switch) to notify cabin crew (*"Cabin Crew, prepare for landing"*).
-    *   **EFIS Panel:** Prepare **LS** button, pre-select barometric reference (**BARO**) to destination QNH (set at Transition Level).
+    *   **Descent Exterior Lighting Setup:** Switch single **LANDING** light switch to **ON**.
+    *   **Cabin Landing Notification:** Press **ALL** button on **CALLS PANEL** (or toggle **SEAT BELTS** switch) to notify cabin crew (*"Cabin Crew, prepare for landing"*).
+    *   **EFIS Panel Setup:** Press **LS** button, pre-select barometric reference (**BARO**) to destination QNH (set at Transition Level).
     *   **MCDU RAD NAV:** Verify tuned ILS frequency and inbound course.
 
 ---
@@ -177,7 +189,13 @@ This phase covers initial approach through touchdown. The goal is establishing l
 *   **Established Report (ATC Communication):**
     *   Once Localizer is captured (FMA displays `LOC` green): Report to ATC: *"Established ILS Runway [Runway Identifier]"*.
 *   **Final Approach Sequence & Gear Extension:**
-    *   At 1 Dot below Glideslope (approx. 2,000 ft AAL / 6 NM out): Select **GEAR DOWN**, arm **GND SPOILERS**, switch **NOSE** light to **T.O.**, switch **RWY TURN OFF** lights to **ON**.
+    *   At 1 Dot below Glideslope (approx. 2,000 ft AAL / 6 NM out):
+        *   Select **GEAR DOWN**.
+        *   Arm **GND SPOILERS** (pull speedbrake lever UP).
+*   **Landing Exterior Lighting Setup:**
+    *   Switch **NOSE** light to **T.O.** (Takeoff / Landing position).
+    *   Switch **RWY TURN OFF** lights to **ON**.
+*   **Final Landing Configuration:**
     *   As speed decelerates: Select **FLAPS 3**, followed by **FLAPS FULL** at F-speed. Ensure full landing configuration is established prior to 1,000 ft AAL.
     *   **AUTOBRAKE:** Select **MED** or **LOW**. Execute Landing Checklist.
 *   **Autopilot Disconnect (Manual Landing):**
@@ -191,32 +209,51 @@ This phase covers initial approach through touchdown. The goal is establishing l
 Safe runway exit, taxiing to gate, engine shutdown, and securing the aircraft.
 
 *   **Runway Vacated:**
-    *   Once yellow holding line is crossed: Switch **STROBE** to **AUTO** (or **OFF**), switch single **LANDING** light switch to **OFF**, switch **NOSE** light to **TAXI**. Switch **RWY TURN OFF** lights to **OFF**.
-    *   **WXR RADAR PANEL:** Switch **SYS** and **PWS** to **OFF**.
-    *   **TCAS & XPDR:** Set **TCAS MODE** to **STBY** (or `TA ONLY`), set **ATC/XPDR MODE** to **AUTO** / **STBY**.
-    *   **FLAPS:** Retract flaps to **0**. **GND SPOILERS:** Disarm spoilers.
-    *   **ENG ANTI ICE:** Switch off if previously active.
+    *   Once yellow holding line is fully crossed, execute after-landing reconfiguration.
+*   **After-Landing Exterior Lighting:**
+    *   Switch **STROBE** light from ON to **AUTO**.
+    *   Switch single **LANDING** light switch to **OFF**.
+    *   Switch **NOSE** light to **TAXI**.
+    *   Switch **RWY TURN OFF** lights to **OFF**.
+*   **Weather Radar Shutdown:**
+    *   Switch **SYS** to **OFF**.
+    *   Switch **PWS** to **OFF**.
+*   **Transponder & TCAS Shutdown:**
+    *   Set **TCAS MODE** to **STBY** (or **TA ONLY**).
+    *   Set **ATC / XPDR MODE** to **STBY** (or **AUTO**).
+*   **Post-Landing Reconfiguration:**
+    *   Retract **FLAPS** to **0**.
+    *   Disarm **GND SPOILERS** (push lever down).
+    *   Switch **ENG ANTI ICE** to **OFF** (provided no ground icing conditions exist).
 *   **Taxi to Gate & APU Management:**
     *   Request taxi to gate from ATC Ground (*"Request taxi to gate"*).
     *   Approx. 3 minutes prior to reaching gate: Switch **APU MASTER SW** to **ON** and **APU START** to **ON**.
 *   **Parking Position & Shutdown:**
-    *   **Ground Crew Safety:** When turning into stand (visual contact with marshaller / VDGS), switch **NOSE** light (Taxi) to **OFF** to avoid blinding ground personnel.
+    *   **Stand Arrival Lighting:** When turning into stand (visual contact with marshaller / VDGS), switch **NOSE** light to **OFF** (prevents blinding ground personnel).
     *   Stop aircraft precisely on stop mark, set **PARKING BRAKE** to **ON**.
     *   Once ECAM displays *APU AVAIL*: Switch **APU BLEED** to **ON**.
     *   Connect jetway via flyPad (if using GPU: switch **EXT PWR** to **ON**).
     *   **BRK FAN:** Check ECAM WHEEL page. Switch **BRK FAN** to **ON** if brake temperatures exceed 150°C.
 *   **Engine Shutdown Flow:**
     *   **ENG MASTER 1 & 2:** Move to **OFF** after verifying 3-minute idle cool-down.
-    *   Once engines come to a complete stop ($N_1 < 5\%$): Switch **BEACON** light to **OFF**, switch all **FUEL PUMPS** to **OFF**.
+    *   Switch all **FUEL PUMPS** to **OFF**.
+*   **Beacon Light & Passengers:**
+    *   Once engines come to a complete stop ($N_1 < 5\%$): Switch **BEACON** light to **OFF** (signals safe area to ground personnel).
     *   Switch **SEAT BELTS** to **OFF** (signals passengers to unbuckle/disembark) and initiate passenger deboarding via flyPad.
 
 > **Transit / Turnaround Procedure:**
 > For an immediate follow-on flight leg, skip *Securing the Aircraft* below and proceed directly to [Transit SOP – Section 1: Arrival, Parking & Transit Setup](transit-sop.md#1-arrival-parking--transit-setup).
 
 *   **Securing Aircraft (Cold & Dark):**
-    *   Switch **NO SMOKING** to **OFF**, **EMER EXIT LT** to **OFF**.
-    *   Switch **APU BLEED** to **OFF**, **CREW SUPPLY** (Oxygen) to **OFF**.
-    *   Turn ADIRS 1, 2, 3 sequentially to **OFF**, switch **NAV & LOGO** light to **OFF**.
-    *   Switch **BRK FAN** to **OFF** (after cooling), **APU MASTER SW** to **OFF**, switch **BAT 1 & 2** to **OFF**.
+    *   Switch **STROBE** light switch from AUTO to **OFF**.
+    *   Switch **NO SMOKING** to **OFF**.
+    *   Switch **EMER EXIT LT** to **OFF**.
+    *   Switch **APU BLEED** to **OFF**.
+    *   Switch **CREW SUPPLY** (Oxygen) to **OFF**.
+    *   Turn ADIRS 1, 2, 3 sequentially to **OFF**.
+    *   Switch **NAV & LOGO** light to **OFF**.
+    *   Switch **BRK FAN** to **OFF** (after cooling).
+    *   Switch **APU MASTER SW** to **OFF**.
+    *   Finally, switch **BAT 1 & 2** to **OFF**.
 
 The aircraft is now in a completely unpowered Cold & Dark state.
