@@ -18,6 +18,10 @@ This repository contains highly realistic, chronological Standard Operating Proc
 - [Standard Operating Procedures (SOP)](inibuilds-a330/sop.md) – Complete workflow at the cargo stand from Cold & Dark to Shutdown (Main Deck Cargo Door & ULD Container loading).
 - [Transit SOP (Turnaround)](inibuilds-a330/transit-sop.md) – Time-optimized cargo turnaround procedure.
 
+### 4. Working Title Cessna Citation CJ4 (Executive Jet)
+- [Standard Operating Procedures (SOP)](cj4/sop.md) – Complete workflow from Cold & Dark to Shutdown (Collins Pro Line 21 & FMS 3000).
+- [Transit SOP (Turnaround)](cj4/transit-sop.md) – Time-optimized turnaround procedure for intermediate stops.
+
 ---
 
 ## 📋 Standards & Quality Guidelines
